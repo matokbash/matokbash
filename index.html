@@ -724,8 +724,8 @@
         <input type="radio" name="fulfillment" value="delivery"> משלוח בתשלום (לפי מרחק)
       </label>
       <p style="font-size:calc(12px * var(--fs,1));color:var(--ink-soft);margin-top:8px;">מועד האספקה המדויק יתואם איתכם בוואטסאפ, בהתאם לסיכום ולנוחיותכם.</p>
-      <label style="display:block;margin-top:14px;font-weight:700;font-size:calc(13.5px * var(--fs,1));">שם למילוי בהזמנה<span style="color:var(--pink);"> *</span></label>
-      <input type="text" id="cartRecipientName" placeholder="לדוגמה: שם המקבל/ת או מוען המתנה" style="width:100%;margin-top:6px;border:2px solid var(--line);border-radius:10px;padding:8px 10px;font-size:calc(14px * var(--fs,1));font-family:'Heebo',sans-serif;">
+      <label style="display:block;margin-top:14px;font-weight:700;font-size:calc(13.5px * var(--fs,1));">שם<span style="color:var(--pink);"> *</span></label>
+      <input type="text" id="cartRecipientName" placeholder="לדוגמה: ישראל ישראלי" style="width:100%;margin-top:6px;border:2px solid var(--line);border-radius:10px;padding:8px 10px;font-size:calc(14px * var(--fs,1));font-family:'Heebo',sans-serif;">
       <div id="cityFieldWrap" style="display:none;">
         <label style="display:block;margin-top:12px;font-weight:700;font-size:calc(13.5px * var(--fs,1));">עיר<span id="cityRequiredMark" style="color:var(--pink);"></span></label>
         <input type="text" id="cartCity" placeholder="לדוגמה: רמת גן" style="width:100%;margin-top:6px;border:2px solid var(--line);border-radius:10px;padding:8px 10px;font-size:calc(14px * var(--fs,1));font-family:'Heebo',sans-serif;">
@@ -891,12 +891,12 @@
     var cityEl = document.getElementById('cartCity');
     var city = cityEl ? cityEl.value.trim() : '';
     var msg = 'היי! אשמח להזמין:';
-    if (recipientName) msg += '\nשם למילוי בהזמנה: ' + recipientName;
-    msg += '\n' + lines.join('\n');
-    if (total > 0) msg += '\nסה"כ משוער: ' + fmt(total) + ' ₪';
-    msg += '\nאופן קבלה: ' + fulfillmentText;
+    if (recipientName) msg += '\n\nשם: ' + recipientName;
+    msg += '\n\n' + lines.join('\n');
+    if (total > 0) msg += '\n\nסה"כ משוער: ' + fmt(total) + ' ₪';
+    msg += '\n\nאופן קבלה: ' + fulfillmentText;
     if (city) msg += '\nעיר: ' + city;
-    msg += (fulfillmentInput && fulfillmentInput.value === 'delivery') ? '\nאשמח לתאם תאריך ושעת משלוח' : '\nאשמח לתאם תאריך ושעת איסוף';
+    msg += (fulfillmentInput && fulfillmentInput.value === 'delivery') ? '\n\nאשמח לתאם תאריך ושעת משלוח.' : '\n\nאשמח לתאם תאריך ושעת איסוף.';
     msg += '\nתודה!';
     document.getElementById('cartCheckout').setAttribute('href', 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg));
   }
