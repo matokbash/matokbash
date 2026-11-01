@@ -896,7 +896,7 @@
     if (total > 0) msg += '\nסה"כ משוער: ' + fmt(total) + ' ₪';
     msg += '\nאופן קבלה: ' + fulfillmentText;
     if (city) msg += '\nעיר: ' + city;
-    msg += (fulfillmentInput && fulfillmentInput.value === 'delivery') ? '\nאשמח לתאם מועד משלוח כאן בוואטסאפ.' : '\nאשמח לתאם שעת איסוף כאן בוואטסאפ.';
+    msg += (fulfillmentInput && fulfillmentInput.value === 'delivery') ? '\nאשמח לתאם תאריך ושעת משלוח' : '\nאשמח לתאם תאריך ושעת איסוף';
     msg += '\nתודה!';
     document.getElementById('cartCheckout').setAttribute('href', 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg));
   }
