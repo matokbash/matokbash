@@ -284,7 +284,12 @@
   @media (max-width:600px){ .a11y-btn{left:14px;bottom:14px;width:50px;height:50px;} .a11y-panel{left:14px;bottom:76px;} }
 
   /* הצהרת נגישות */
-  .a11y-modal.stmt{max-width:620px;padding:30px 28px;}
+  .a11y-modal.stmt{max-width:620px;padding:34px 28px 28px;counter-reset:stmt;}
+  .stmt-kicker{display:inline-block;background:var(--teal);color:#fff;font-weight:800;font-size:calc(12.5px * var(--fs,1));letter-spacing:.5px;padding:4px 14px;border-radius:999px;margin-bottom:10px;}
+  .a11y-modal.stmt h3{padding-bottom:12px;position:relative;}
+  .a11y-modal.stmt h3::after{content:"";position:absolute;right:0;bottom:0;width:64px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--pink),var(--teal));}
+  .a11y-modal.stmt h4{display:flex;align-items:center;gap:10px;counter-increment:stmt;}
+  .a11y-modal.stmt h4::before{content:counter(stmt);flex:none;width:28px;height:28px;border-radius:50%;background:var(--pink);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;}
   .a11y-modal.stmt h3{font-size:calc(26px * var(--fs,1));margin:0 0 6px;}
   .a11y-modal.stmt .stmt-lead{font-size:calc(16px * var(--fs,1));line-height:1.9;color:var(--ink-soft);margin:0 0 6px;}
   .a11y-modal.stmt h4{font-family:'Rubik',sans-serif;font-size:calc(18px * var(--fs,1));font-weight:800;color:var(--pink);margin:26px 0 10px;padding-top:18px;border-top:1px solid var(--line);}
@@ -318,6 +323,8 @@
   html.a11y-contrast svg,html.a11y-contrast svg *{background:transparent !important;}
   html.a11y-contrast *::before,html.a11y-contrast *::after{background-color:transparent !important;}
   html.a11y-contrast .hero .btn-primary::after{display:none !important;}
+  html.a11y-contrast .a11y-modal.stmt h4::before{border:2px solid #FFD400 !important;color:#FFD400 !important;}
+  html.a11y-contrast .stmt-kicker{background-color:#FFD400 !important;color:#000 !important;}
   html.a11y-contrast .faq-item summary::after{background-color:#000 !important;}
   html.a11y-contrast #cartBtn{background-color:#000 !important;color:#FFD400 !important;border:none !important;}
   html.a11y-contrast :is(button,.btn-primary,.navcta,.add-cart-btn,.tab,.float-wa,.to-top,#cartCheckout) > :not(svg){background-color:transparent !important;color:inherit !important;}
@@ -773,6 +780,7 @@
 <div class="a11y-modal-overlay" id="a11yStmtOverlay">
   <div class="a11y-modal stmt" role="dialog" aria-modal="true" aria-labelledby="a11yStmtTitle">
     <button type="button" class="a11y-modal-close" id="a11yStmtClose" aria-label="סגירה">&times;</button>
+    <div class="stmt-kicker">מתוק בשכונה</div>
     <h3 id="a11yStmtTitle">הצהרת נגישות</h3>
     <p class="stmt-lead">מתוק בשכונה רוצה שכמה שיותר אנשים יוכלו לגלוש באתר, לעיין בתפריט ולהזמין בצורה עצמאית ונוחה, כולל אנשים עם מוגבלות. אנחנו ממשיכים לשפר את האתר ולהתאים אותו.</p>
 
@@ -825,11 +833,50 @@
   </div>
 </div>
 
-<div class="a11y-modal-overlay" id="statementOverlay">
-  <div class="a11y-modal">
-    <button type="button" class="a11y-modal-close" id="statementClose" aria-label="סגירה">&times;</button>
-    <h3 id="statementTitle"></h3>
-    <div id="statementBody"></div>
+<div class="a11y-modal-overlay" id="privStmtOverlay">
+  <div class="a11y-modal stmt" role="dialog" aria-modal="true" aria-labelledby="privStmtTitle">
+    <button type="button" class="a11y-modal-close" id="privStmtClose" aria-label="סגירה">&times;</button>
+    <div class="stmt-kicker">מתוק בשכונה</div>
+    <h3 id="privStmtTitle">הצהרת פרטיות</h3>
+    <p class="stmt-lead">מתוק בשכונה (&quot;העסק&quot;, &quot;אנחנו&quot;) מכבדת את פרטיותכם. כאן מוסבר אילו נתונים נאספים באתר, איך משתמשים בהם, ומה הזכויות שלכם, בהתאם לחוק הגנת הפרטיות, התשמ״א-1981, כפי שתוקן בתיקון 13 שנכנס לתוקף באוגוסט 2025.</p>
+
+    <h4>מה האתר אוסף</h4>
+    <p>האתר הוא אתר תדמיתי. אין בו הרשמה, התחברות עם משתמש או סליקת תשלומים, ואין לנו שרת או מסד נתונים שאליו נשלח מידע מהאתר.</p>
+    <p>כל מה שקורה בעגלת ההזמנה (מוצרים, כמויות, איסוף או משלוח, והשם שהוזן) מתבצע בדפדפן שלכם בלבד, ונמחק כשסוגרים או מרעננים את העמוד.</p>
+
+    <h4>הזמנה בוואטסאפ</h4>
+    <p>בלחיצה על &quot;שליחת ההזמנה בוואטסאפ&quot; האתר רק מכין הודעת טקסט מוכנה (עם המוצרים, הכמויות, אופן הקבלה והשם) ופותח את הוואטסאפ שלכם. ההודעה נשלחת רק אם אתם לוחצים על &quot;שליחה&quot; בוואטסאפ. האתר עצמו לא שולח, לא מעביר ולא שומר את תוכן ההודעה.</p>
+
+    <h4>פנייה אלינו ופלטפורמות חיצוניות</h4>
+    <p>פנייה בוואטסאפ, בטלפון או בעמודי האינסטגרם והפייסבוק שלנו מתבצעת ישירות מול הפלטפורמה (וואטסאפ או מטא) ולא דרך האתר. המידע שתמסרו שם, כמו שם, טלפון וכתובת למשלוח, מתקבל אצלנו בשיחה ולא נאסף על ידי האתר. על הפלטפורמות חלה מדיניות הפרטיות שלהן, שאיננה בשליטתנו.</p>
+
+    <h4>איך אנחנו משתמשים במידע</h4>
+    <ul>
+      <li>המידע שמסרתם בשיחה משמש רק לטיפול בהזמנה, לתיאום איסוף או משלוח וליצירת קשר בנוגע להזמנה.</li>
+      <li>איננו מעבירים את הפרטים לגורם שלישי.</li>
+      <li>איננו משתמשים בהם לשיווק ללא הסכמתכם המפורשת.</li>
+    </ul>
+
+    <h4>עוגיות ומעקב</h4>
+    <p>האתר אינו משתמש בעוגיות (Cookies), פיקסלים או כלי מעקב, לא לאנליטיקה ולא לפרסום. הבחירה שלכם בין מצב בהיר למצב כהה נשמרת בדפדפן שלכם בלבד. הגדרות כלי הנגישות פועלות בדפדפן ואינן נשמרות או מועברות לשום מקום.</p>
+
+    <h4>הזכויות שלכם</h4>
+    <p>לגבי מידע אישי שנמסר לנו בשיחה או בהזמנה, עומדות לכם הזכויות הבאות:</p>
+    <ul>
+      <li>לדעת אילו פרטים נשמרים אצלנו עליכם.</li>
+      <li>לבקש לעיין במידע.</li>
+      <li>לבקש לתקן מידע שגוי או לא מעודכן.</li>
+      <li>לבקש למחוק את המידע כשאין עוד צורך עסקי או חוקי לשמור אותו.</li>
+      <li>להתנגד לשימוש בפרטיכם לשיווק ישיר.</li>
+    </ul>
+    <p>כדי לממש זכות, צרו קשר בוואטסאפ או בטלפון: <a href="tel:0585049194">058-5049194</a>. נטפל בפנייה בהקדם.</p>
+
+    <h4>עסק שכונתי קטן</h4>
+    <p>מתוק בשכונה היא עסק שכונתי קטן שאינו מנהל מאגר מידע לצורכי מסחר במידע, דיוור המוני או ניטור שיטתי, ולכן אינו כפוף לחובות הרישום ולמינוי ממונה הגנת פרטיות החלות על ארגונים גדולים. אנחנו מתייחסים ברצינות לכל מידע שנמסר לנו ושומרים עליו בזהירות.</p>
+
+    <h4>עדכונים</h4>
+    <p>ההצהרה עשויה להתעדכן בהתאם לשינויים באתר או בדרישות החוק, והגרסה העדכנית תופיע תמיד כאן.</p>
+    <p class="stmt-date">תאריך עדכון אחרון: 4 בנובמבר 2026</p>
   </div>
 </div>
 
@@ -1589,53 +1636,17 @@
 })();
 
 (function(){
-  var overlay = document.getElementById('statementOverlay');
-  var titleEl = document.getElementById('statementTitle');
-  var bodyEl = document.getElementById('statementBody');
-  var closeBtn = document.getElementById('statementClose');
-
-  var PRIVACY_TEXT = [
-    'עדכון אחרון: ספטמבר 2026. מתוק בשכונה (״העסק״, ״אנחנו״) מכבדת את פרטיותכם, ומדיניות זו מסבירה אילו נתונים נאספים באתר, כיצד הם משמשים, ומהן זכויותיכם — בהתאם לחוק הגנת הפרטיות, התשמ״א-1981, כפי שתוקן בתיקון 13 שנכנס לתוקף באוגוסט 2025.',
-
-    'האתר הוא אתר תדמיתי, ואינו כולל מערכת הרשמה, התחברות עם משתמש, או סליקת תשלומים דרך האתר עצמו. אין לנו שרת או מסד נתונים חיצוני שאליו נשלח מידע מהאתר — כל מה שקורה בעגלת ההזמנה (בחירת מוצרים, כמויות, אפשרות איסוף/משלוח, ושם למילוי בהזמנה אם הוזן) מתבצע ונשמר זמנית בדפדפן שלכם בלבד, ונמחק כשסוגרים או מרעננים את העמוד.',
-
-    'כשלוחצים על כפתור ״שליחת ההזמנה בוואטסאפ״, האתר רק מכין עבורכם הודעת טקסט מוכנה מראש (עם פירוט המוצרים, הכמויות, אופן הקבלה והשם שהזנתם, אם הזנתם) ופותח את אפליקציית הוואטסאפ שלכם. ההודעה נשלחת רק אם אתם בוחרים בפועל ללחוץ על ״שליחה״ בתוך הוואטסאפ — האתר עצמו אינו שולח, מעביר או שומר את תוכן ההודעה בשום שלב.',
-
-    'פנייה אלינו — בין אם דרך כפתור הוואטסאפ, ליצירת קשר טלפוני, או דרך העמודים שלנו באינסטגרם ובפייסבוק — מתבצעת ישירות מול אותה פלטפורמה (וואטסאפ / מטא), ולא דרך שרתי האתר. המידע שתמסרו במסגרת שיחה כזו (למשל שם, מספר טלפון, כתובת למשלוח) מתקבל אצלנו ישירות בשיחה, ולא נאסף על ידי האתר. עליכם חלה גם מדיניות הפרטיות של אותה פלטפורמה, שאיננה בשליטתנו.',
-
-    'המידע שתמסרו לנו בשיחה (וואטסאפ, טלפון או הודעה ברשתות החברתיות) — כגון שם, מספר טלפון וכתובת למשלוח — משמש אותנו אך ורק לצורך הטיפול בהזמנה שלכם, תיאום מועד איסוף או משלוח, ויצירת קשר בנוגע להזמנה. אנחנו לא מעבירים את הפרטים האלה לגורם שלישי, ולא משתמשים בהם לשיווק ללא הסכמתכם המפורשת.',
-
-    'האתר אינו משתמש בעוגיות (Cookies), פיקסלים או כלי מעקב מכל סוג — לא לצורכי אנליטיקה, לא לפרסום ולא לאיסוף מידע גלישה. תפריט הנגישות שבתחתית העמוד (שינוי גודל טקסט, ניגודיות ועוד) פועל כולו בתוך הדפדפן שלכם ואינו נשמר או מועבר לשום מקום.',
-
-    'בהתאם לחוק הגנת הפרטיות, עומדות לכם מספר זכויות ביחס למידע אישי שנמסר לנו במסגרת שיחה או הזמנה: הזכות לדעת אילו פרטים נשמרים אצלנו לגביכם; הזכות לבקש לעיין במידע זה; הזכות לבקש לתקן מידע שגוי או לא מעודכן; הזכות לבקש את מחיקת המידע כשאין עוד צורך עסקי או חוקי בשמירתו; והזכות להתנגד לכל שימוש בפרטיכם לצורכי שיווק ישיר. כדי לממש כל אחת מהזכויות האלה, פשוט צרו קשר בוואטסאפ למספר 058-5049194 ונטפל בפנייה בהקדם.',
-
-    'מתוק בשכונה היא עסק שכונתי קטן שאינו מנהל מאגר מידע לצורכי מסחר במידע, דיוור המוני או ניטור שיטתי, ולכן אינו כפוף לחובות הרישום או למינוי ממונה הגנת פרטיות החלות על ארגונים גדולים יותר. עם זאת, אנחנו מתייחסים ברצינות לכל מידע שנמסר לנו ונוקטים משנה זהירות בשמירה עליו.',
-
-    'מדיניות זו עשויה להתעדכן מעת לעת בהתאם לשינויים באתר או בדרישות החוק; הגרסה העדכנית תמיד תופיע כאן. לשאלות נוספות בנוגע לפרטיות, ניתן לפנות אלינו בוואטסאפ למספר 058-5049194.'
-  ];
-
-  function openModal(title, paragraphs){
-    titleEl.textContent = title;
-    bodyEl.innerHTML = paragraphs.map(function(p){ return '<p>' + p + '</p>'; }).join('');
-    overlay.classList.add('open');
-  }
-
-  (function(){
-    var ov = document.getElementById('a11yStmtOverlay');
-    var cl = document.getElementById('a11yStmtClose');
-    document.getElementById('openA11yStatement').addEventListener('click', function(e){
+  function wire(openId, ovId, closeId){
+    var ov = document.getElementById(ovId), cl = document.getElementById(closeId);
+    document.getElementById(openId).addEventListener('click', function(e){
       e.preventDefault(); ov.classList.add('open'); cl.focus();
     });
     cl.addEventListener('click', function(){ ov.classList.remove('open'); });
     ov.addEventListener('click', function(e){ if (e.target === ov) ov.classList.remove('open'); });
     document.addEventListener('keydown', function(e){ if (e.key === 'Escape') ov.classList.remove('open'); });
-  })();
-  document.getElementById('openPrivacyStatement').addEventListener('click', function(e){
-    e.preventDefault();
-    openModal('הצהרת פרטיות', PRIVACY_TEXT);
-  });
-  closeBtn.addEventListener('click', function(){ overlay.classList.remove('open'); });
-  overlay.addEventListener('click', function(e){ if (e.target === overlay) overlay.classList.remove('open'); });
+  }
+  wire('openA11yStatement', 'a11yStmtOverlay', 'a11yStmtClose');
+  wire('openPrivacyStatement', 'privStmtOverlay', 'privStmtClose');
 })();
 </script>
 
