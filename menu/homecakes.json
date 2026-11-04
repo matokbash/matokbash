@@ -1,0 +1,124 @@
+{
+  "id": "homecakes",
+  "label": "עוגות ביתיות",
+  "items": [
+    {
+      "name": "עוגה בחושה",
+      "price": "קטנה 60 ₪ / גדולה 85 ₪",
+      "badge": "קיטו",
+      "desc": "טעמי שוקולד, וניל וקפה, בננות ותפוחים מקורמלים, או אגוזים",
+      "carbs": "3–5 גרם פחמימה לפרוסה, בהתאם לטעם",
+      "flavors": [
+        "שוקולד",
+        "וניל",
+        "קפה",
+        "בננות ותפוחים מקורמלים",
+        "אגוזים"
+      ],
+      "flavorCap": 1,
+      "flavorLabel": "בחרו טעם",
+      "priceOptions": [
+        {
+          "label": "גדולה – 85 ₪",
+          "price": 85
+        },
+        {
+          "label": "קטנה – 60 ₪",
+          "price": 60
+        }
+      ],
+      "nutrition": [
+        {
+          "unit": "פרוסה",
+          "perUnit": {
+            "cal": 274,
+            "protein": 4.85,
+            "carbs": 3,
+            "fat": 26.73
+          },
+          "per100g": {
+            "cal": 472,
+            "protein": 8.34,
+            "carbs": 6,
+            "fat": 45.99
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "images/gallery-15.jpg",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "name": "עוגת גבינה (אינגליש קייק)",
+      "price": "115 ₪",
+      "badge": "קיטו",
+      "desc": "עוגת גבינה קלאסית בתבנית אינגליש קייק",
+      "carbs": "2 גרם פחמימה לפרוסה (מתוך 8 פרוסות)",
+      "nutrition": [
+        {
+          "unit": "פרוסה",
+          "perUnit": {
+            "cal": 223,
+            "protein": 3.92,
+            "carbs": 2,
+            "fat": 21.99
+          },
+          "per100g": {
+            "cal": 225,
+            "protein": 3.95,
+            "carbs": 2,
+            "fat": 22.15
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "images/product-10.jpg",
+          "label": ""
+        },
+        {
+          "src": "images/product-31.jpg",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "name": "עוגת שמרים",
+      "price": "85 ₪",
+      "desc": "עוגת שמרים ממולאת שוקולד או קינמון",
+      "carbs": "8 גרם פחמימה לפרוסה (מתוך 8 פרוסות)",
+      "flavors": [
+        "שוקולד",
+        "קינמון"
+      ],
+      "flavorCap": 1,
+      "flavorLabel": "בחרו טעם",
+      "nutrition": [
+        {
+          "unit": "פרוסה",
+          "perUnit": {
+            "cal": 267,
+            "protein": 6.69,
+            "carbs": 8,
+            "fat": 23.45
+          },
+          "per100g": {
+            "cal": 422,
+            "protein": 10.57,
+            "carbs": 13,
+            "fat": 37.07
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "images/product-11.jpg",
+          "label": ""
+        }
+      ]
+    }
+  ]
+}

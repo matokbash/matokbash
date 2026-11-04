@@ -1,0 +1,364 @@
+{
+  "id": "cookies",
+  "label": "עוגיות ומאפים",
+  "items": [
+    {
+      "name": "עוגיות",
+      "price": "החל מ-70 ₪ (6 יח׳)",
+      "desc": "שוקולד ציפס / אמסטרדם / שוקולד במילוי בוטנים — גם ב-8 וב-12 יח׳",
+      "carbs": "5–7 גרם פחמימה ליחידה, בהתאם לטעם",
+      "priceOptions": [
+        {
+          "label": "6 יח׳ – 80 ₪",
+          "price": 80,
+          "flavorMax": 1
+        },
+        {
+          "label": "8 יח׳ – 105 ₪",
+          "price": 105,
+          "flavorMax": 1
+        },
+        {
+          "label": "12 יח׳ – 135 ₪",
+          "price": 135,
+          "flavorMax": 2
+        }
+      ],
+      "flavors": [
+        "שוקולד ציפס",
+        "אמסטרדם",
+        "שוקולד במילוי בוטנים"
+      ],
+      "flavorLabel": "בחרו עד 2 טעמים (החל מ-12 יח׳)",
+      "nutrition": [
+        {
+          "label": "שוקולד ציפס",
+          "unit": "יחידה",
+          "perUnit": {
+            "cal": 185,
+            "protein": 4.17,
+            "carbs": 5,
+            "fat": 16.57
+          },
+          "per100g": {
+            "cal": 368,
+            "protein": 8.29,
+            "carbs": 9,
+            "fat": 32.92
+          }
+        },
+        {
+          "label": "אמסטרדם",
+          "unit": "יחידה",
+          "perUnit": {
+            "cal": 195,
+            "protein": 5.24,
+            "carbs": 7,
+            "fat": 16.8
+          },
+          "per100g": {
+            "cal": 347,
+            "protein": 9.29,
+            "carbs": 13,
+            "fat": 29.82
+          }
+        },
+        {
+          "label": "שוקולד במילוי בוטנים",
+          "unit": "יחידה",
+          "perUnit": {
+            "cal": 192,
+            "protein": 4.58,
+            "carbs": 5,
+            "fat": 17.86
+          },
+          "per100g": {
+            "cal": 369,
+            "protein": 8.8,
+            "carbs": 9,
+            "fat": 34.35
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "images/product-07.jpg",
+          "label": "שוקולד ציפס"
+        },
+        {
+          "src": "images/product-08.jpg",
+          "label": "שוקולד במילוי בוטנים"
+        },
+        {
+          "src": "images/product-21.jpg",
+          "label": "אמסטרדם"
+        }
+      ]
+    },
+    {
+      "name": "בראוניז",
+      "price": "50 ₪ (4 יח׳) / 90 ₪ (9 יח׳)",
+      "desc": "ריבועי בראוניז עשירים בשוקולד",
+      "carbs": "7 גרם פחמימה לריבוע",
+      "priceOptions": [
+        {
+          "label": "60 ₪ (4 יח׳)",
+          "price": 60
+        },
+        {
+          "label": "120 ₪ (9 יח׳)",
+          "price": 120
+        }
+      ],
+      "nutrition": [
+        {
+          "unit": "ריבוע",
+          "perUnit": {
+            "cal": 239,
+            "protein": 6.28,
+            "carbs": 7,
+            "fat": 21.46
+          },
+          "per100g": {
+            "cal": 316,
+            "protein": 8.32,
+            "carbs": 9,
+            "fat": 28.42
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "images/gallery-04.jpg",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "name": "פאדג׳",
+      "price": "30 ₪ / 65 ₪",
+      "badge": "קיטו",
+      "desc": "חתיכות פאדג׳ שוקולד עשירות",
+      "carbs": "3 גרם פחמימה ליחידה",
+      "priceOptions": [
+        {
+          "label": "4 יח׳ – 40 ₪",
+          "price": 40
+        },
+        {
+          "label": "9 יח׳ – 85 ₪",
+          "price": 85
+        }
+      ],
+      "nutrition": [
+        {
+          "unit": "יחידה",
+          "perUnit": {
+            "cal": 117,
+            "protein": 3.2,
+            "carbs": 2,
+            "fat": 10.07
+          },
+          "per100g": {
+            "cal": 600,
+            "protein": 16.46,
+            "carbs": 11,
+            "fat": 51.77
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "images/product-12.jpg",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "name": "קייקפופס",
+      "price": "10 ₪ / 45 ₪ / 90 ₪",
+      "desc": "ציפוי שוקולד מריר או לבן, על מקל",
+      "carbs": "5–6 גרם פחמימה ליחידה, בהתאם לציפוי",
+      "priceOptions": [
+        {
+          "label": "1 יח׳ – 12 ₪",
+          "price": 12,
+          "qty": 1
+        },
+        {
+          "label": "5 יח׳ – 55 ₪",
+          "price": 55,
+          "qty": 5
+        },
+        {
+          "label": "10 יח׳ – 100 ₪",
+          "price": 100,
+          "qty": 10
+        }
+      ],
+      "flavors": [
+        "ציפוי שוקולד מריר",
+        "ציפוי שוקולד לבן"
+      ],
+      "nutrition": [
+        {
+          "label": "ציפוי שוקולד מריר",
+          "unit": "יחידה",
+          "perUnit": {
+            "cal": 187,
+            "protein": 3.55,
+            "carbs": 5,
+            "fat": 16.72
+          },
+          "per100g": {
+            "cal": 425,
+            "protein": 8.07,
+            "carbs": 12,
+            "fat": 38.01
+          }
+        },
+        {
+          "label": "ציפוי שוקולד לבן",
+          "unit": "יחידה",
+          "perUnit": {
+            "cal": 190,
+            "protein": 3.63,
+            "carbs": 6,
+            "fat": 16.92
+          },
+          "per100g": {
+            "cal": 431,
+            "protein": 8.25,
+            "carbs": 13,
+            "fat": 38.46
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "images/product-05.jpg",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "name": "עוגיות חמאה",
+      "price": "65 ₪ (10 יח׳) / 120 ₪ (20 יח׳)",
+      "badge": "קיטו",
+      "desc": "עוגיות חמאה קלאסיות ופריכות",
+      "carbs": "2 גרם פחמימה ליחידה",
+      "priceOptions": [
+        {
+          "label": "65 ₪ (10 יח׳)",
+          "price": 65
+        },
+        {
+          "label": "120 ₪ (20 יח׳)",
+          "price": 120
+        }
+      ],
+      "nutrition": [
+        {
+          "unit": "יחידה",
+          "perUnit": {
+            "cal": 68,
+            "protein": 1.92,
+            "carbs": 2,
+            "fat": 5.88
+          },
+          "per100g": {
+            "cal": 346,
+            "protein": 9.77,
+            "carbs": 9,
+            "fat": 29.93
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "images/product-04.jpg",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "name": "מקרונים",
+      "price": "95 ₪ (10 יח׳)",
+      "desc": "טעמי שוקולד, וניל או קפה",
+      "carbs": "2 גרם פחמימה ליחידה",
+      "flavors": [
+        "שוקולד",
+        "וניל",
+        "קפה"
+      ],
+      "flavorCap": 2,
+      "flavorLabel": "בחרו עד 2 טעמים",
+      "nutrition": [
+        {
+          "unit": "יחידה",
+          "perUnit": {
+            "cal": 51,
+            "protein": 1.74,
+            "carbs": 2,
+            "fat": 3.86
+          },
+          "per100g": {
+            "cal": 227,
+            "protein": 7.69,
+            "carbs": 10,
+            "fat": 17.06
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "images/product-20.jpg",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "name": "מיני-דונאטס",
+      "price": "50 ₪ (6 יח׳) / 100 ₪ (12 יח׳)",
+      "desc": "בציפוי שוקולד מריר או לבן",
+      "carbs": "4 גרם פחמימה ליחידה",
+      "flavors": [
+        "בציפוי שוקולד מריר",
+        "בציפוי שוקולד לבן"
+      ],
+      "priceOptions": [
+        {
+          "label": "60 ₪ (6 יח׳)",
+          "price": 60
+        },
+        {
+          "label": "115 ₪ (12 יח׳)",
+          "price": 115
+        }
+      ],
+      "nutrition": [
+        {
+          "unit": "יחידה",
+          "perUnit": {
+            "cal": 112,
+            "protein": 2.11,
+            "carbs": 4,
+            "fat": 9.65
+          },
+          "per100g": {
+            "cal": 371,
+            "protein": 7,
+            "carbs": 13,
+            "fat": 31.99
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "images/product-03.jpg",
+          "label": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,935 @@
+# הגדרות מסך הניהול (Pages CMS): קטגוריה נפרדת לכל קובץ בתיקיית menu
+media:
+  input: images
+  output: /images
+content:
+- name: sets
+  label: מארזים
+  type: file
+  path: menu/sets.json
+  format: json
+  fields:
+  - name: id
+    label: מזהה פנימי (באנגלית
+    לא לשנות): null
+    type: string
+  - name: label
+    label: שם הקטגוריה
+    type: string
+  - name: items
+    label: מוצרים
+    type: object
+    list: true
+    fields:
+    - name: name
+      label: שם המוצר
+      type: string
+    - name: price
+      label: מחיר להצגה (למשל 85 ₪)
+      type: string
+    - name: badge
+      label: תווית (למשל קיטו או חדש)
+      type: string
+      required: false
+    - name: desc
+      label: תיאור
+      type: text
+    - name: carbs
+      label: פחמימות (טקסט להצגה)
+      type: string
+      required: false
+    - name: images
+      label: תמונות (אחת או יותר)
+      type: object
+      list: true
+      fields:
+      - name: src
+        label: תמונה
+        type: image
+      - name: label
+        label: כיתוב קצר לתמונה (אופציונלי)
+        type: string
+        required: false
+    - name: priceOptions
+      label: אפשרויות מחיר (גדלים או כמויות)
+      type: object
+      list: true
+      fields:
+      - name: label
+        label: טקסט האפשרות (למשל גדולה - 85 ₪)
+        type: string
+      - name: price
+        label: מחיר במספר
+        type: number
+      - name: qty
+        label: כמות יחידות (אם רלוונטי)
+        type: number
+        required: false
+      - name: flavorMax
+        label: מקסימום טעמים באפשרות הזו
+        type: number
+        required: false
+    - name: flavors
+      label: טעמים לבחירה
+      type: string
+      list: true
+      required: false
+    - name: flavorCap
+      label: מקסימום טעמים שאפשר לבחור
+      type: number
+      required: false
+    - name: flavorLabel
+      label: כותרת בחירת הטעם
+      type: string
+      required: false
+    - name: flavorNoteLabel
+      label: שם הטעם בהודעת הוואטסאפ
+      type: string
+      required: false
+    - name: choiceGroups
+      label: קבוצות בחירה (למשל קרם ברולה או מוסים)
+      type: object
+      list: true
+      required: false
+      fields:
+      - name: label
+        label: כותרת הבחירה
+        type: string
+      - name: options
+        label: אפשרויות
+        type: string
+        list: true
+    - name: allowCakeText
+      label: לאפשר כתיבה על העוגה
+      type: boolean
+      required: false
+    - name: cakeTextLabel
+      label: כותרת שדה הכתיבה
+      type: string
+      required: false
+    - name: cakeTextPlaceholder
+      label: דוגמה בשדה הכתיבה
+      type: string
+      required: false
+    - name: nutrition
+      label: ערכים תזונתיים
+      type: object
+      list: true
+      required: false
+      fields:
+      - name: label
+        label: שם הווריאציה (רק אם יש כמה ערכים)
+        type: string
+        required: false
+      - name: unit
+        label: יחידה (פרוסה
+        יחידה: null
+        כוס): null
+        type: string
+      - name: perUnit
+        label: ליחידה
+        type: object
+        fields:
+        - name: cal
+          label: קלוריות
+          type: number
+        - name: protein
+          label: חלבון
+          type: number
+        - name: carbs
+          label: פחמימות
+          type: number
+        - name: fat
+          label: שומן
+          type: number
+      - name: per100g
+        label: ל-100 גרם
+        type: object
+        fields:
+        - name: cal
+          label: קלוריות
+          type: number
+        - name: protein
+          label: חלבון
+          type: number
+        - name: carbs
+          label: פחמימות
+          type: number
+        - name: fat
+          label: שומן
+          type: number
+- name: cakes
+  label: עוגות מעוצבות
+  type: file
+  path: menu/cakes.json
+  format: json
+  fields:
+  - name: id
+    label: מזהה פנימי (באנגלית
+    לא לשנות): null
+    type: string
+  - name: label
+    label: שם הקטגוריה
+    type: string
+  - name: items
+    label: מוצרים
+    type: object
+    list: true
+    fields:
+    - name: name
+      label: שם המוצר
+      type: string
+    - name: price
+      label: מחיר להצגה (למשל 85 ₪)
+      type: string
+    - name: badge
+      label: תווית (למשל קיטו או חדש)
+      type: string
+      required: false
+    - name: desc
+      label: תיאור
+      type: text
+    - name: carbs
+      label: פחמימות (טקסט להצגה)
+      type: string
+      required: false
+    - name: images
+      label: תמונות (אחת או יותר)
+      type: object
+      list: true
+      fields:
+      - name: src
+        label: תמונה
+        type: image
+      - name: label
+        label: כיתוב קצר לתמונה (אופציונלי)
+        type: string
+        required: false
+    - name: priceOptions
+      label: אפשרויות מחיר (גדלים או כמויות)
+      type: object
+      list: true
+      fields:
+      - name: label
+        label: טקסט האפשרות (למשל גדולה - 85 ₪)
+        type: string
+      - name: price
+        label: מחיר במספר
+        type: number
+      - name: qty
+        label: כמות יחידות (אם רלוונטי)
+        type: number
+        required: false
+      - name: flavorMax
+        label: מקסימום טעמים באפשרות הזו
+        type: number
+        required: false
+    - name: flavors
+      label: טעמים לבחירה
+      type: string
+      list: true
+      required: false
+    - name: flavorCap
+      label: מקסימום טעמים שאפשר לבחור
+      type: number
+      required: false
+    - name: flavorLabel
+      label: כותרת בחירת הטעם
+      type: string
+      required: false
+    - name: flavorNoteLabel
+      label: שם הטעם בהודעת הוואטסאפ
+      type: string
+      required: false
+    - name: choiceGroups
+      label: קבוצות בחירה (למשל קרם ברולה או מוסים)
+      type: object
+      list: true
+      required: false
+      fields:
+      - name: label
+        label: כותרת הבחירה
+        type: string
+      - name: options
+        label: אפשרויות
+        type: string
+        list: true
+    - name: allowCakeText
+      label: לאפשר כתיבה על העוגה
+      type: boolean
+      required: false
+    - name: cakeTextLabel
+      label: כותרת שדה הכתיבה
+      type: string
+      required: false
+    - name: cakeTextPlaceholder
+      label: דוגמה בשדה הכתיבה
+      type: string
+      required: false
+    - name: nutrition
+      label: ערכים תזונתיים
+      type: object
+      list: true
+      required: false
+      fields:
+      - name: label
+        label: שם הווריאציה (רק אם יש כמה ערכים)
+        type: string
+        required: false
+      - name: unit
+        label: יחידה (פרוסה
+        יחידה: null
+        כוס): null
+        type: string
+      - name: perUnit
+        label: ליחידה
+        type: object
+        fields:
+        - name: cal
+          label: קלוריות
+          type: number
+        - name: protein
+          label: חלבון
+          type: number
+        - name: carbs
+          label: פחמימות
+          type: number
+        - name: fat
+          label: שומן
+          type: number
+      - name: per100g
+        label: ל-100 גרם
+        type: object
+        fields:
+        - name: cal
+          label: קלוריות
+          type: number
+        - name: protein
+          label: חלבון
+          type: number
+        - name: carbs
+          label: פחמימות
+          type: number
+        - name: fat
+          label: שומן
+          type: number
+- name: cookies
+  label: עוגיות ומאפים
+  type: file
+  path: menu/cookies.json
+  format: json
+  fields:
+  - name: id
+    label: מזהה פנימי (באנגלית
+    לא לשנות): null
+    type: string
+  - name: label
+    label: שם הקטגוריה
+    type: string
+  - name: items
+    label: מוצרים
+    type: object
+    list: true
+    fields:
+    - name: name
+      label: שם המוצר
+      type: string
+    - name: price
+      label: מחיר להצגה (למשל 85 ₪)
+      type: string
+    - name: badge
+      label: תווית (למשל קיטו או חדש)
+      type: string
+      required: false
+    - name: desc
+      label: תיאור
+      type: text
+    - name: carbs
+      label: פחמימות (טקסט להצגה)
+      type: string
+      required: false
+    - name: images
+      label: תמונות (אחת או יותר)
+      type: object
+      list: true
+      fields:
+      - name: src
+        label: תמונה
+        type: image
+      - name: label
+        label: כיתוב קצר לתמונה (אופציונלי)
+        type: string
+        required: false
+    - name: priceOptions
+      label: אפשרויות מחיר (גדלים או כמויות)
+      type: object
+      list: true
+      fields:
+      - name: label
+        label: טקסט האפשרות (למשל גדולה - 85 ₪)
+        type: string
+      - name: price
+        label: מחיר במספר
+        type: number
+      - name: qty
+        label: כמות יחידות (אם רלוונטי)
+        type: number
+        required: false
+      - name: flavorMax
+        label: מקסימום טעמים באפשרות הזו
+        type: number
+        required: false
+    - name: flavors
+      label: טעמים לבחירה
+      type: string
+      list: true
+      required: false
+    - name: flavorCap
+      label: מקסימום טעמים שאפשר לבחור
+      type: number
+      required: false
+    - name: flavorLabel
+      label: כותרת בחירת הטעם
+      type: string
+      required: false
+    - name: flavorNoteLabel
+      label: שם הטעם בהודעת הוואטסאפ
+      type: string
+      required: false
+    - name: choiceGroups
+      label: קבוצות בחירה (למשל קרם ברולה או מוסים)
+      type: object
+      list: true
+      required: false
+      fields:
+      - name: label
+        label: כותרת הבחירה
+        type: string
+      - name: options
+        label: אפשרויות
+        type: string
+        list: true
+    - name: allowCakeText
+      label: לאפשר כתיבה על העוגה
+      type: boolean
+      required: false
+    - name: cakeTextLabel
+      label: כותרת שדה הכתיבה
+      type: string
+      required: false
+    - name: cakeTextPlaceholder
+      label: דוגמה בשדה הכתיבה
+      type: string
+      required: false
+    - name: nutrition
+      label: ערכים תזונתיים
+      type: object
+      list: true
+      required: false
+      fields:
+      - name: label
+        label: שם הווריאציה (רק אם יש כמה ערכים)
+        type: string
+        required: false
+      - name: unit
+        label: יחידה (פרוסה
+        יחידה: null
+        כוס): null
+        type: string
+      - name: perUnit
+        label: ליחידה
+        type: object
+        fields:
+        - name: cal
+          label: קלוריות
+          type: number
+        - name: protein
+          label: חלבון
+          type: number
+        - name: carbs
+          label: פחמימות
+          type: number
+        - name: fat
+          label: שומן
+          type: number
+      - name: per100g
+        label: ל-100 גרם
+        type: object
+        fields:
+        - name: cal
+          label: קלוריות
+          type: number
+        - name: protein
+          label: חלבון
+          type: number
+        - name: carbs
+          label: פחמימות
+          type: number
+        - name: fat
+          label: שומן
+          type: number
+- name: creams
+  label: קרמים ומוסים
+  type: file
+  path: menu/creams.json
+  format: json
+  fields:
+  - name: id
+    label: מזהה פנימי (באנגלית
+    לא לשנות): null
+    type: string
+  - name: label
+    label: שם הקטגוריה
+    type: string
+  - name: items
+    label: מוצרים
+    type: object
+    list: true
+    fields:
+    - name: name
+      label: שם המוצר
+      type: string
+    - name: price
+      label: מחיר להצגה (למשל 85 ₪)
+      type: string
+    - name: badge
+      label: תווית (למשל קיטו או חדש)
+      type: string
+      required: false
+    - name: desc
+      label: תיאור
+      type: text
+    - name: carbs
+      label: פחמימות (טקסט להצגה)
+      type: string
+      required: false
+    - name: images
+      label: תמונות (אחת או יותר)
+      type: object
+      list: true
+      fields:
+      - name: src
+        label: תמונה
+        type: image
+      - name: label
+        label: כיתוב קצר לתמונה (אופציונלי)
+        type: string
+        required: false
+    - name: priceOptions
+      label: אפשרויות מחיר (גדלים או כמויות)
+      type: object
+      list: true
+      fields:
+      - name: label
+        label: טקסט האפשרות (למשל גדולה - 85 ₪)
+        type: string
+      - name: price
+        label: מחיר במספר
+        type: number
+      - name: qty
+        label: כמות יחידות (אם רלוונטי)
+        type: number
+        required: false
+      - name: flavorMax
+        label: מקסימום טעמים באפשרות הזו
+        type: number
+        required: false
+    - name: flavors
+      label: טעמים לבחירה
+      type: string
+      list: true
+      required: false
+    - name: flavorCap
+      label: מקסימום טעמים שאפשר לבחור
+      type: number
+      required: false
+    - name: flavorLabel
+      label: כותרת בחירת הטעם
+      type: string
+      required: false
+    - name: flavorNoteLabel
+      label: שם הטעם בהודעת הוואטסאפ
+      type: string
+      required: false
+    - name: choiceGroups
+      label: קבוצות בחירה (למשל קרם ברולה או מוסים)
+      type: object
+      list: true
+      required: false
+      fields:
+      - name: label
+        label: כותרת הבחירה
+        type: string
+      - name: options
+        label: אפשרויות
+        type: string
+        list: true
+    - name: allowCakeText
+      label: לאפשר כתיבה על העוגה
+      type: boolean
+      required: false
+    - name: cakeTextLabel
+      label: כותרת שדה הכתיבה
+      type: string
+      required: false
+    - name: cakeTextPlaceholder
+      label: דוגמה בשדה הכתיבה
+      type: string
+      required: false
+    - name: nutrition
+      label: ערכים תזונתיים
+      type: object
+      list: true
+      required: false
+      fields:
+      - name: label
+        label: שם הווריאציה (רק אם יש כמה ערכים)
+        type: string
+        required: false
+      - name: unit
+        label: יחידה (פרוסה
+        יחידה: null
+        כוס): null
+        type: string
+      - name: perUnit
+        label: ליחידה
+        type: object
+        fields:
+        - name: cal
+          label: קלוריות
+          type: number
+        - name: protein
+          label: חלבון
+          type: number
+        - name: carbs
+          label: פחמימות
+          type: number
+        - name: fat
+          label: שומן
+          type: number
+      - name: per100g
+        label: ל-100 גרם
+        type: object
+        fields:
+        - name: cal
+          label: קלוריות
+          type: number
+        - name: protein
+          label: חלבון
+          type: number
+        - name: carbs
+          label: פחמימות
+          type: number
+        - name: fat
+          label: שומן
+          type: number
+- name: homecakes
+  label: עוגות ביתיות
+  type: file
+  path: menu/homecakes.json
+  format: json
+  fields:
+  - name: id
+    label: מזהה פנימי (באנגלית
+    לא לשנות): null
+    type: string
+  - name: label
+    label: שם הקטגוריה
+    type: string
+  - name: items
+    label: מוצרים
+    type: object
+    list: true
+    fields:
+    - name: name
+      label: שם המוצר
+      type: string
+    - name: price
+      label: מחיר להצגה (למשל 85 ₪)
+      type: string
+    - name: badge
+      label: תווית (למשל קיטו או חדש)
+      type: string
+      required: false
+    - name: desc
+      label: תיאור
+      type: text
+    - name: carbs
+      label: פחמימות (טקסט להצגה)
+      type: string
+      required: false
+    - name: images
+      label: תמונות (אחת או יותר)
+      type: object
+      list: true
+      fields:
+      - name: src
+        label: תמונה
+        type: image
+      - name: label
+        label: כיתוב קצר לתמונה (אופציונלי)
+        type: string
+        required: false
+    - name: priceOptions
+      label: אפשרויות מחיר (גדלים או כמויות)
+      type: object
+      list: true
+      fields:
+      - name: label
+        label: טקסט האפשרות (למשל גדולה - 85 ₪)
+        type: string
+      - name: price
+        label: מחיר במספר
+        type: number
+      - name: qty
+        label: כמות יחידות (אם רלוונטי)
+        type: number
+        required: false
+      - name: flavorMax
+        label: מקסימום טעמים באפשרות הזו
+        type: number
+        required: false
+    - name: flavors
+      label: טעמים לבחירה
+      type: string
+      list: true
+      required: false
+    - name: flavorCap
+      label: מקסימום טעמים שאפשר לבחור
+      type: number
+      required: false
+    - name: flavorLabel
+      label: כותרת בחירת הטעם
+      type: string
+      required: false
+    - name: flavorNoteLabel
+      label: שם הטעם בהודעת הוואטסאפ
+      type: string
+      required: false
+    - name: choiceGroups
+      label: קבוצות בחירה (למשל קרם ברולה או מוסים)
+      type: object
+      list: true
+      required: false
+      fields:
+      - name: label
+        label: כותרת הבחירה
+        type: string
+      - name: options
+        label: אפשרויות
+        type: string
+        list: true
+    - name: allowCakeText
+      label: לאפשר כתיבה על העוגה
+      type: boolean
+      required: false
+    - name: cakeTextLabel
+      label: כותרת שדה הכתיבה
+      type: string
+      required: false
+    - name: cakeTextPlaceholder
+      label: דוגמה בשדה הכתיבה
+      type: string
+      required: false
+    - name: nutrition
+      label: ערכים תזונתיים
+      type: object
+      list: true
+      required: false
+      fields:
+      - name: label
+        label: שם הווריאציה (רק אם יש כמה ערכים)
+        type: string
+        required: false
+      - name: unit
+        label: יחידה (פרוסה
+        יחידה: null
+        כוס): null
+        type: string
+      - name: perUnit
+        label: ליחידה
+        type: object
+        fields:
+        - name: cal
+          label: קלוריות
+          type: number
+        - name: protein
+          label: חלבון
+          type: number
+        - name: carbs
+          label: פחמימות
+          type: number
+        - name: fat
+          label: שומן
+          type: number
+      - name: per100g
+        label: ל-100 גרם
+        type: object
+        fields:
+        - name: cal
+          label: קלוריות
+          type: number
+        - name: protein
+          label: חלבון
+          type: number
+        - name: carbs
+          label: פחמימות
+          type: number
+        - name: fat
+          label: שומן
+          type: number
+- name: platters
+  label: במות קינוחים
+  type: file
+  path: menu/platters.json
+  format: json
+  fields:
+  - name: id
+    label: מזהה פנימי (באנגלית
+    לא לשנות): null
+    type: string
+  - name: label
+    label: שם הקטגוריה
+    type: string
+  - name: items
+    label: מוצרים
+    type: object
+    list: true
+    fields:
+    - name: name
+      label: שם המוצר
+      type: string
+    - name: price
+      label: מחיר להצגה (למשל 85 ₪)
+      type: string
+    - name: badge
+      label: תווית (למשל קיטו או חדש)
+      type: string
+      required: false
+    - name: desc
+      label: תיאור
+      type: text
+    - name: carbs
+      label: פחמימות (טקסט להצגה)
+      type: string
+      required: false
+    - name: images
+      label: תמונות (אחת או יותר)
+      type: object
+      list: true
+      fields:
+      - name: src
+        label: תמונה
+        type: image
+      - name: label
+        label: כיתוב קצר לתמונה (אופציונלי)
+        type: string
+        required: false
+    - name: priceOptions
+      label: אפשרויות מחיר (גדלים או כמויות)
+      type: object
+      list: true
+      fields:
+      - name: label
+        label: טקסט האפשרות (למשל גדולה - 85 ₪)
+        type: string
+      - name: price
+        label: מחיר במספר
+        type: number
+      - name: qty
+        label: כמות יחידות (אם רלוונטי)
+        type: number
+        required: false
+      - name: flavorMax
+        label: מקסימום טעמים באפשרות הזו
+        type: number
+        required: false
+    - name: flavors
+      label: טעמים לבחירה
+      type: string
+      list: true
+      required: false
+    - name: flavorCap
+      label: מקסימום טעמים שאפשר לבחור
+      type: number
+      required: false
+    - name: flavorLabel
+      label: כותרת בחירת הטעם
+      type: string
+      required: false
+    - name: flavorNoteLabel
+      label: שם הטעם בהודעת הוואטסאפ
+      type: string
+      required: false
+    - name: choiceGroups
+      label: קבוצות בחירה (למשל קרם ברולה או מוסים)
+      type: object
+      list: true
+      required: false
+      fields:
+      - name: label
+        label: כותרת הבחירה
+        type: string
+      - name: options
+        label: אפשרויות
+        type: string
+        list: true
+    - name: allowCakeText
+      label: לאפשר כתיבה על העוגה
+      type: boolean
+      required: false
+    - name: cakeTextLabel
+      label: כותרת שדה הכתיבה
+      type: string
+      required: false
+    - name: cakeTextPlaceholder
+      label: דוגמה בשדה הכתיבה
+      type: string
+      required: false
+    - name: nutrition
+      label: ערכים תזונתיים
+      type: object
+      list: true
+      required: false
+      fields:
+      - name: label
+        label: שם הווריאציה (רק אם יש כמה ערכים)
+        type: string
+        required: false
+      - name: unit
+        label: יחידה (פרוסה
+        יחידה: null
+        כוס): null
+        type: string
+      - name: perUnit
+        label: ליחידה
+        type: object
+        fields:
+        - name: cal
+          label: קלוריות
+          type: number
+        - name: protein
+          label: חלבון
+          type: number
+        - name: carbs
+          label: פחמימות
+          type: number
+        - name: fat
+          label: שומן
+          type: number
+      - name: per100g
+        label: ל-100 גרם
+        type: object
+        fields:
+        - name: cal
+          label: קלוריות
+          type: number
+        - name: protein
+          label: חלבון
+          type: number
+        - name: carbs
+          label: פחמימות
+          type: number
+        - name: fat
+          label: שומן
+          type: number
