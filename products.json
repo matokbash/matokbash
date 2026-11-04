@@ -10,10 +10,10 @@
           "desc": "4 ריבועי בראוניז, 8 עוגיות אמסטרדם, 3 מרנג על מקל, 5 קייקפופס",
           "images": [
             {
-              "src": "images/product-16.jpg",
-              "label": ""
+              "src": "/images/product-16.jpg"
             }
-          ]
+          ],
+          "allowCakeText": false
         },
         {
           "name": "מארז מאנצ׳",
@@ -21,15 +21,20 @@
           "desc": "6 עוגיות שוקולד ציפס ומלח ים, 6 עוגיות אמסטרדם, 3 קייקפופס, 3 מרנג",
           "images": [
             {
-              "src": "images/product-18.jpg",
-              "label": ""
+              "src": "/images/product-18.jpg"
             }
-          ]
+          ],
+          "allowCakeText": false
         },
         {
           "name": "מארז קצר ולעניין",
           "price": "240 ₪",
           "desc": "8 עוגיות שוקולד ציפס, 10 מקרונים (שוקולד/וניל/קפה), עוגה בחושה קטנה",
+          "images": [
+            {
+              "src": "/images/product-19.jpg"
+            }
+          ],
           "flavors": [
             "שוקולד",
             "וניל",
@@ -38,12 +43,7 @@
           "flavorCap": 2,
           "flavorLabel": "בחרו עד 2 טעמי מקרונים",
           "flavorNoteLabel": "טעם המקרונים",
-          "images": [
-            {
-              "src": "images/product-19.jpg",
-              "label": ""
-            }
-          ]
+          "allowCakeText": false
         },
         {
           "name": "מארז שוקולדי",
@@ -51,16 +51,21 @@
           "desc": "6 עוגיות אמסטרדם, 6 עוגיות שוקולד במילוי בוטנים, 4 ריבועי בראוניז, 4 קייקפופס",
           "images": [
             {
-              "src": "images/gallery-02.jpg",
-              "label": ""
+              "src": "/images/gallery-02.jpg"
             }
-          ]
+          ],
+          "allowCakeText": false
         },
         {
           "name": "מארז קיטו",
           "price": "210 ₪",
           "badge": "חדש",
           "desc": "4 קרם ברולה/מוסים, 10 עוגיות חמאה/שושני מרנג, עוגה בחושה קטנה",
+          "images": [
+            {
+              "src": "/images/product-15.jpg"
+            }
+          ],
           "choiceGroups": [
             {
               "label": "בחרו: קרם ברולה או מוסים",
@@ -77,12 +82,7 @@
               ]
             }
           ],
-          "images": [
-            {
-              "src": "images/product-15.jpg",
-              "label": ""
-            }
-          ]
+          "allowCakeText": false
         },
         {
           "name": "מארז פיצוץ",
@@ -90,10 +90,10 @@
           "desc": "עוגה בחושה קטנה, 6 עוגיות שוקולד במילוי חמאת בוטנים, 5 קייקפופס, 4 ריבועי בראוניז, 3 מרנג",
           "images": [
             {
-              "src": "images/product-17.jpg",
-              "label": ""
+              "src": "/images/product-17.jpg"
             }
-          ]
+          ],
+          "allowCakeText": false
         }
       ]
     },
@@ -106,30 +106,46 @@
           "price": "150 ₪ לספרה",
           "desc": "ספרה בגודל A4, שכבות פריך ושכבות קרם וניל/שוקולד, קישוט לבחירה",
           "carbs": "7 גרם פחמימה לפרוסה (מתוך 12 פרוסות)",
+          "images": [
+            {
+              "src": "/images/gallery-10.jpg"
+            }
+          ],
           "priceOptions": [
             {
               "label": "ספרה אחת – 180 ₪",
-              "price": 180
+              "price": 180,
+              "flavorMax": 1
             },
             {
               "label": "שתי ספרות – 360 ₪",
-              "price": 360
+              "price": 360,
+              "flavorMax": 1
             }
           ],
+          "flavors": [
+            "וניל",
+            "שוקולד"
+          ],
+          "flavorCap": 1,
           "allowCakeText": true,
           "cakeTextLabel": "איזה מספר לרשום?",
-          "cakeTextPlaceholder": "לדוגמה: 18",
-          "images": [
-            {
-              "src": "images/gallery-10.jpg",
-              "label": ""
-            }
-          ]
+          "cakeTextPlaceholder": "לדוגמה: 18"
         },
         {
           "name": "עוגת גן",
           "price": "A4: 150 ₪ | קוטר 22: 120 ₪",
           "desc": "עוגת שוקולד מצופה בגנאש שוקולד, סוכריות צבעוניות וזילופי קצפת",
+          "images": [
+            {
+              "src": "/images/product-01.jpg",
+              "label": "קוטר 22"
+            },
+            {
+              "src": "/images/product-29.jpg",
+              "label": "A4"
+            }
+          ],
           "priceOptions": [
             {
               "label": "קוטר 22 – 160 ₪",
@@ -141,22 +157,34 @@
             }
           ],
           "allowCakeText": true,
-          "cakeTextPlaceholder": "לדוגמה: יום הולדת שמח",
-          "images": [
-            {
-              "src": "images/product-01.jpg",
-              "label": ""
-            },
-            {
-              "src": "images/product-29.jpg",
-              "label": "A4"
-            }
-          ]
+          "cakeTextPlaceholder": "לדוגמה: יום הולדת שמח"
         },
         {
           "name": "עוגה מעוצבת בהתאמה אישית",
           "price": "החל מ-300 ₪",
           "desc": "עוגה בעיצוב אישי לפי בקשה — לא רק דמויות, אלא כל נושא, אירוע או קונספט שתרצו (סרטים, מסיבות, צורות מיוחדות ועוד). המחיר תלוי בקוטר ובמורכבות העיצוב, ויכול להיות גבוה יותר מהמחירים הבסיסיים בהתאם לרמת הפירוט המבוקשת — לתמחור מדויק כדאי לשלוח השראה או תמונה בוואטסאפ.",
+          "images": [
+            {
+              "src": "/images/gallery-09.jpg",
+              "label": "פיקאצ׳ו"
+            },
+            {
+              "src": "/images/gallery-14.jpg",
+              "label": "וואן פיס"
+            },
+            {
+              "src": "/images/gallery-11.jpg",
+              "label": "Wicked"
+            },
+            {
+              "src": "/images/product-27.jpg",
+              "label": "חג המולד"
+            },
+            {
+              "src": "/images/product-28.jpg",
+              "label": "Brawl Stars"
+            }
+          ],
           "priceOptions": [
             {
               "label": "קוטר 18 – 340 ₪",
@@ -173,29 +201,7 @@
           ],
           "allowCakeText": true,
           "cakeTextLabel": "איזה עיצוב/דמות תרצו? (מומלץ לצרף גם רפרנס בוואטסאפ)",
-          "cakeTextPlaceholder": "לדוגמה: פיקאצ׳ו, וואן פיס...",
-          "images": [
-            {
-              "src": "images/gallery-09.jpg",
-              "label": "פיקאצ׳ו"
-            },
-            {
-              "src": "images/gallery-14.jpg",
-              "label": "וואן פיס"
-            },
-            {
-              "src": "images/gallery-11.jpg",
-              "label": "Wicked"
-            },
-            {
-              "src": "images/product-27.jpg",
-              "label": "חג המולד"
-            },
-            {
-              "src": "images/product-28.jpg",
-              "label": "Brawl Stars"
-            }
-          ]
+          "cakeTextPlaceholder": "לדוגמה: פיקאצ׳ו, וואן פיס..."
         },
         {
           "name": "עוגת גבינה של הביוקר",
@@ -203,6 +209,14 @@
           "badge": "קיטו",
           "desc": "עוגת גבינה עם זילופי קצפת במסגרת, קישוט זהב, שוקולד ציפס, הקדשה אישית",
           "carbs": "2 גרם פחמימה לפרוסה (מתוך 8 פרוסות)",
+          "images": [
+            {
+              "src": "/images/product-25.jpg"
+            },
+            {
+              "src": "/images/product-30.jpg"
+            }
+          ],
           "allowCakeText": true,
           "cakeTextPlaceholder": "לדוגמה: יום הולדת שמח",
           "nutrition": [
@@ -221,16 +235,6 @@
                 "fat": 22.15
               }
             }
-          ],
-          "images": [
-            {
-              "src": "images/product-25.jpg",
-              "label": ""
-            },
-            {
-              "src": "images/product-30.jpg",
-              "label": ""
-            }
           ]
         }
       ]
@@ -244,6 +248,20 @@
           "price": "החל מ-70 ₪ (6 יח׳)",
           "desc": "שוקולד ציפס / אמסטרדם / שוקולד במילוי בוטנים — גם ב-8 וב-12 יח׳",
           "carbs": "5–7 גרם פחמימה ליחידה, בהתאם לטעם",
+          "images": [
+            {
+              "src": "/images/product-07.jpg",
+              "label": "שוקולד ציפס"
+            },
+            {
+              "src": "/images/product-08.jpg",
+              "label": "שוקולד במילוי בוטנים"
+            },
+            {
+              "src": "/images/product-21.jpg",
+              "label": "אמסטרדם"
+            }
+          ],
           "priceOptions": [
             {
               "label": "6 יח׳ – 80 ₪",
@@ -267,6 +285,7 @@
             "שוקולד במילוי בוטנים"
           ],
           "flavorLabel": "בחרו עד 2 טעמים (החל מ-12 יח׳)",
+          "allowCakeText": false,
           "nutrition": [
             {
               "label": "שוקולד ציפס",
@@ -316,20 +335,6 @@
                 "fat": 34.35
               }
             }
-          ],
-          "images": [
-            {
-              "src": "images/product-07.jpg",
-              "label": "שוקולד ציפס"
-            },
-            {
-              "src": "images/product-08.jpg",
-              "label": "שוקולד במילוי בוטנים"
-            },
-            {
-              "src": "images/product-21.jpg",
-              "label": "אמסטרדם"
-            }
           ]
         },
         {
@@ -337,6 +342,11 @@
           "price": "50 ₪ (4 יח׳) / 90 ₪ (9 יח׳)",
           "desc": "ריבועי בראוניז עשירים בשוקולד",
           "carbs": "7 גרם פחמימה לריבוע",
+          "images": [
+            {
+              "src": "/images/gallery-04.jpg"
+            }
+          ],
           "priceOptions": [
             {
               "label": "60 ₪ (4 יח׳)",
@@ -347,6 +357,7 @@
               "price": 120
             }
           ],
+          "allowCakeText": false,
           "nutrition": [
             {
               "unit": "ריבוע",
@@ -363,12 +374,6 @@
                 "fat": 28.42
               }
             }
-          ],
-          "images": [
-            {
-              "src": "images/gallery-04.jpg",
-              "label": ""
-            }
           ]
         },
         {
@@ -377,6 +382,11 @@
           "badge": "קיטו",
           "desc": "חתיכות פאדג׳ שוקולד עשירות",
           "carbs": "3 גרם פחמימה ליחידה",
+          "images": [
+            {
+              "src": "/images/product-12.jpg"
+            }
+          ],
           "priceOptions": [
             {
               "label": "4 יח׳ – 40 ₪",
@@ -387,6 +397,7 @@
               "price": 85
             }
           ],
+          "allowCakeText": false,
           "nutrition": [
             {
               "unit": "יחידה",
@@ -403,12 +414,6 @@
                 "fat": 51.77
               }
             }
-          ],
-          "images": [
-            {
-              "src": "images/product-12.jpg",
-              "label": ""
-            }
           ]
         },
         {
@@ -416,6 +421,11 @@
           "price": "10 ₪ / 45 ₪ / 90 ₪",
           "desc": "ציפוי שוקולד מריר או לבן, על מקל",
           "carbs": "5–6 גרם פחמימה ליחידה, בהתאם לציפוי",
+          "images": [
+            {
+              "src": "/images/product-05.jpg"
+            }
+          ],
           "priceOptions": [
             {
               "label": "1 יח׳ – 12 ₪",
@@ -437,6 +447,7 @@
             "ציפוי שוקולד מריר",
             "ציפוי שוקולד לבן"
           ],
+          "allowCakeText": false,
           "nutrition": [
             {
               "label": "ציפוי שוקולד מריר",
@@ -470,12 +481,6 @@
                 "fat": 38.46
               }
             }
-          ],
-          "images": [
-            {
-              "src": "images/product-05.jpg",
-              "label": ""
-            }
           ]
         },
         {
@@ -484,6 +489,11 @@
           "badge": "קיטו",
           "desc": "עוגיות חמאה קלאסיות ופריכות",
           "carbs": "2 גרם פחמימה ליחידה",
+          "images": [
+            {
+              "src": "/images/product-04.jpg"
+            }
+          ],
           "priceOptions": [
             {
               "label": "65 ₪ (10 יח׳)",
@@ -494,6 +504,7 @@
               "price": 120
             }
           ],
+          "allowCakeText": false,
           "nutrition": [
             {
               "unit": "יחידה",
@@ -510,12 +521,6 @@
                 "fat": 29.93
               }
             }
-          ],
-          "images": [
-            {
-              "src": "images/product-04.jpg",
-              "label": ""
-            }
           ]
         },
         {
@@ -523,6 +528,11 @@
           "price": "95 ₪ (10 יח׳)",
           "desc": "טעמי שוקולד, וניל או קפה",
           "carbs": "2 גרם פחמימה ליחידה",
+          "images": [
+            {
+              "src": "/images/product-20.jpg"
+            }
+          ],
           "flavors": [
             "שוקולד",
             "וניל",
@@ -530,6 +540,7 @@
           ],
           "flavorCap": 2,
           "flavorLabel": "בחרו עד 2 טעמים",
+          "allowCakeText": false,
           "nutrition": [
             {
               "unit": "יחידה",
@@ -546,12 +557,6 @@
                 "fat": 17.06
               }
             }
-          ],
-          "images": [
-            {
-              "src": "images/product-20.jpg",
-              "label": ""
-            }
           ]
         },
         {
@@ -559,9 +564,10 @@
           "price": "50 ₪ (6 יח׳) / 100 ₪ (12 יח׳)",
           "desc": "בציפוי שוקולד מריר או לבן",
           "carbs": "4 גרם פחמימה ליחידה",
-          "flavors": [
-            "בציפוי שוקולד מריר",
-            "בציפוי שוקולד לבן"
+          "images": [
+            {
+              "src": "/images/product-03.jpg"
+            }
           ],
           "priceOptions": [
             {
@@ -573,6 +579,11 @@
               "price": 115
             }
           ],
+          "flavors": [
+            "בציפוי שוקולד מריר",
+            "בציפוי שוקולד לבן"
+          ],
+          "allowCakeText": false,
           "nutrition": [
             {
               "unit": "יחידה",
@@ -589,12 +600,6 @@
                 "fat": 31.99
               }
             }
-          ],
-          "images": [
-            {
-              "src": "images/product-03.jpg",
-              "label": ""
-            }
           ]
         }
       ]
@@ -609,6 +614,11 @@
           "badge": "קיטו",
           "desc": "קרם וניל קלאסי עם שכבת קרמל פריכה",
           "carbs": "4 גרם פחמימה לתבנית",
+          "images": [
+            {
+              "src": "/images/gallery-16.jpg"
+            }
+          ],
           "priceOptions": [
             {
               "label": "25 ₪ (יחידה)",
@@ -619,6 +629,7 @@
               "price": 125
             }
           ],
+          "allowCakeText": false,
           "nutrition": [
             {
               "unit": "תבנית",
@@ -635,12 +646,6 @@
                 "fat": 16.26
               }
             }
-          ],
-          "images": [
-            {
-              "src": "images/gallery-16.jpg",
-              "label": ""
-            }
           ]
         },
         {
@@ -649,10 +654,10 @@
           "badge": "קיטו",
           "desc": "טעמים: פררו רושה, רפאלו ופטיסייר",
           "carbs": "2 גרם פחמימה לתבנית",
-          "flavors": [
-            "פררו רושה",
-            "רפאלו",
-            "פטיסייר"
+          "images": [
+            {
+              "src": "/images/product-13.jpg"
+            }
           ],
           "priceOptions": [
             {
@@ -666,6 +671,12 @@
               "qty": 6
             }
           ],
+          "flavors": [
+            "פררו רושה",
+            "רפאלו",
+            "פטיסייר"
+          ],
+          "allowCakeText": false,
           "nutrition": [
             {
               "unit": "יחידה",
@@ -682,12 +693,6 @@
                 "fat": 32.34
               }
             }
-          ],
-          "images": [
-            {
-              "src": "images/product-13.jpg",
-              "label": ""
-            }
           ]
         },
         {
@@ -695,6 +700,14 @@
           "price": "25 ₪ / 140 ₪ (6 יח׳)",
           "desc": "מתכון מסורתי בגרסה דלת פחמימה",
           "carbs": "1 גרם פחמימה ליחידה",
+          "images": [
+            {
+              "src": "/images/product-09.jpg"
+            },
+            {
+              "src": "/images/gallery-08.jpg"
+            }
+          ],
           "priceOptions": [
             {
               "label": "30 ₪ (יחידה)",
@@ -705,6 +718,7 @@
               "price": 160
             }
           ],
+          "allowCakeText": false,
           "nutrition": [
             {
               "unit": "יחידה",
@@ -721,16 +735,6 @@
                 "fat": 22.07
               }
             }
-          ],
-          "images": [
-            {
-              "src": "images/product-09.jpg",
-              "label": ""
-            },
-            {
-              "src": "images/gallery-08.jpg",
-              "label": ""
-            }
           ]
         },
         {
@@ -739,6 +743,11 @@
           "badge": "קיטו",
           "desc": "מרנג קליל בצורת שושנים",
           "carbs": "0 גרם פחמימה ליחידה",
+          "images": [
+            {
+              "src": "/images/gallery-05.jpg"
+            }
+          ],
           "priceOptions": [
             {
               "label": "35 ₪ (5 יח׳)",
@@ -749,6 +758,7 @@
               "price": 65
             }
           ],
+          "allowCakeText": false,
           "nutrition": [
             {
               "unit": "יחידה",
@@ -765,12 +775,6 @@
                 "fat": 0.08
               }
             }
-          ],
-          "images": [
-            {
-              "src": "images/gallery-05.jpg",
-              "label": ""
-            }
           ]
         },
         {
@@ -779,6 +783,11 @@
           "badge": "קיטו",
           "desc": "מרנג פריך על מקל, אידאלי למארזים",
           "carbs": "0 גרם פחמימה ליחידה",
+          "images": [
+            {
+              "src": "/images/product-14.jpg"
+            }
+          ],
           "priceOptions": [
             {
               "label": "45 ₪ (5 יח׳)",
@@ -789,6 +798,7 @@
               "price": 85
             }
           ],
+          "allowCakeText": false,
           "nutrition": [
             {
               "unit": "יחידה",
@@ -804,12 +814,6 @@
                 "carbs": 0,
                 "fat": 0.08
               }
-            }
-          ],
-          "images": [
-            {
-              "src": "images/product-14.jpg",
-              "label": ""
             }
           ]
         }
@@ -825,15 +829,11 @@
           "badge": "קיטו",
           "desc": "טעמי שוקולד, וניל וקפה, בננות ותפוחים מקורמלים, או אגוזים",
           "carbs": "3–5 גרם פחמימה לפרוסה, בהתאם לטעם",
-          "flavors": [
-            "שוקולד",
-            "וניל",
-            "קפה",
-            "בננות ותפוחים מקורמלים",
-            "אגוזים"
+          "images": [
+            {
+              "src": "/images/gallery-15.jpg"
+            }
           ],
-          "flavorCap": 1,
-          "flavorLabel": "בחרו טעם",
           "priceOptions": [
             {
               "label": "גדולה – 85 ₪",
@@ -844,6 +844,16 @@
               "price": 60
             }
           ],
+          "flavors": [
+            "שוקולד",
+            "וניל",
+            "קפה",
+            "בננות ותפוחים מקורמלים",
+            "אגוזים"
+          ],
+          "flavorCap": 1,
+          "flavorLabel": "בחרו טעם",
+          "allowCakeText": false,
           "nutrition": [
             {
               "unit": "פרוסה",
@@ -860,12 +870,6 @@
                 "fat": 45.99
               }
             }
-          ],
-          "images": [
-            {
-              "src": "images/gallery-15.jpg",
-              "label": ""
-            }
           ]
         },
         {
@@ -874,6 +878,15 @@
           "badge": "קיטו",
           "desc": "עוגת גבינה קלאסית בתבנית אינגליש קייק",
           "carbs": "2 גרם פחמימה לפרוסה (מתוך 8 פרוסות)",
+          "images": [
+            {
+              "src": "/images/product-10.jpg"
+            },
+            {
+              "src": "/images/product-31.jpg"
+            }
+          ],
+          "allowCakeText": false,
           "nutrition": [
             {
               "unit": "פרוסה",
@@ -890,16 +903,6 @@
                 "fat": 22.15
               }
             }
-          ],
-          "images": [
-            {
-              "src": "images/product-10.jpg",
-              "label": ""
-            },
-            {
-              "src": "images/product-31.jpg",
-              "label": ""
-            }
           ]
         },
         {
@@ -907,12 +910,18 @@
           "price": "85 ₪",
           "desc": "עוגת שמרים ממולאת שוקולד או קינמון",
           "carbs": "8 גרם פחמימה לפרוסה (מתוך 8 פרוסות)",
+          "images": [
+            {
+              "src": "/images/product-11.jpg"
+            }
+          ],
           "flavors": [
             "שוקולד",
             "קינמון"
           ],
           "flavorCap": 1,
           "flavorLabel": "בחרו טעם",
+          "allowCakeText": false,
           "nutrition": [
             {
               "unit": "פרוסה",
@@ -929,12 +938,6 @@
                 "fat": 37.07
               }
             }
-          ],
-          "images": [
-            {
-              "src": "images/product-11.jpg",
-              "label": ""
-            }
           ]
         }
       ]
@@ -949,11 +952,13 @@
           "badge": "קיטו",
           "desc": "טעמי טירמיסו, שוקולד, וניל לימוני ואגוזי לוז",
           "carbs": "1 גרם פחמימה לכוס (חלבי) / 5 גרם (פרווה)",
-          "flavors": [
-            "טירמיסו",
-            "שוקולד",
-            "וניל לימוני",
-            "אגוזי לוז"
+          "images": [
+            {
+              "src": "/images/product-02.jpg"
+            },
+            {
+              "src": "/images/product-32.jpg"
+            }
           ],
           "priceOptions": [
             {
@@ -969,6 +974,13 @@
               "flavorMax": 1
             }
           ],
+          "flavors": [
+            "טירמיסו",
+            "שוקולד",
+            "וניל לימוני",
+            "אגוזי לוז"
+          ],
+          "allowCakeText": false,
           "nutrition": [
             {
               "unit": "כוס",
@@ -985,16 +997,6 @@
                 "fat": 25.81
               }
             }
-          ],
-          "images": [
-            {
-              "src": "images/product-02.jpg",
-              "label": ""
-            },
-            {
-              "src": "images/product-32.jpg",
-              "label": ""
-            }
           ]
         },
         {
@@ -1003,9 +1005,18 @@
           "badge": "קיטו",
           "desc": "טעמי שוקולד או וניל",
           "carbs": "3 גרם פחמימה ליחידה",
-          "flavors": [
-            "שוקולד",
-            "וניל"
+          "images": [
+            {
+              "src": "/images/product-06.jpg"
+            },
+            {
+              "src": "/images/product-23.jpg",
+              "label": "עיצוב טורקיז"
+            },
+            {
+              "src": "/images/product-24.jpg",
+              "label": "עיצוב ורוד"
+            }
           ],
           "priceOptions": [
             {
@@ -1020,6 +1031,10 @@
               "qty": 6,
               "flavorMax": 1
             }
+          ],
+          "flavors": [
+            "שוקולד",
+            "וניל"
           ],
           "allowCakeText": true,
           "cakeTextLabel": "אילו צבעים תרצו לציפוי?",
@@ -1039,20 +1054,6 @@
                 "carbs": 4,
                 "fat": 32.08
               }
-            }
-          ],
-          "images": [
-            {
-              "src": "images/product-06.jpg",
-              "label": ""
-            },
-            {
-              "src": "images/product-23.jpg",
-              "label": "עיצוב טורקיז"
-            },
-            {
-              "src": "images/product-24.jpg",
-              "label": "עיצוב ורוד"
             }
           ]
         }
