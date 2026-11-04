@@ -8,15 +8,11 @@
       "badge": "קיטו",
       "desc": "טעמי שוקולד, וניל וקפה, בננות ותפוחים מקורמלים, או אגוזים",
       "carbs": "3–5 גרם פחמימה לפרוסה, בהתאם לטעם",
-      "flavors": [
-        "שוקולד",
-        "וניל",
-        "קפה",
-        "בננות ותפוחים מקורמלים",
-        "אגוזים"
+      "images": [
+        {
+          "src": "/images/gallery-15.jpg"
+        }
       ],
-      "flavorCap": 1,
-      "flavorLabel": "בחרו טעם",
       "priceOptions": [
         {
           "label": "גדולה – 85 ₪",
@@ -27,6 +23,17 @@
           "price": 60
         }
       ],
+      "flavors": [
+        "שוקולד",
+        "וניל",
+        "קפה",
+        "בננות ותפוחים מקורמלים",
+        "אגוזים"
+      ],
+      "flavorCap": 1,
+      "flavorLabel": "בחרו טעם",
+      "allowCakeText": false,
+      "cakeTextRequired": false,
       "nutrition": [
         {
           "unit": "פרוסה",
@@ -43,12 +50,6 @@
             "fat": 45.99
           }
         }
-      ],
-      "images": [
-        {
-          "src": "images/gallery-15.jpg",
-          "label": ""
-        }
       ]
     },
     {
@@ -57,6 +58,16 @@
       "badge": "קיטו",
       "desc": "עוגת גבינה קלאסית בתבנית אינגליש קייק",
       "carbs": "2 גרם פחמימה לפרוסה (מתוך 8 פרוסות)",
+      "images": [
+        {
+          "src": "/images/product-10.jpg"
+        },
+        {
+          "src": "/images/product-31.jpg"
+        }
+      ],
+      "allowCakeText": false,
+      "cakeTextRequired": false,
       "nutrition": [
         {
           "unit": "פרוסה",
@@ -73,16 +84,6 @@
             "fat": 22.15
           }
         }
-      ],
-      "images": [
-        {
-          "src": "images/product-10.jpg",
-          "label": ""
-        },
-        {
-          "src": "images/product-31.jpg",
-          "label": ""
-        }
       ]
     },
     {
@@ -90,12 +91,22 @@
       "price": "85 ₪",
       "desc": "עוגת שמרים ממולאת שוקולד או קינמון",
       "carbs": "8 גרם פחמימה לפרוסה (מתוך 8 פרוסות)",
+      "images": [
+        {
+          "src": "/images/עוגות שמרים חמות למזג אוויר קררר 💙רק 8 גרם פחמימה לפרוסה ❕80₪-1.webp"
+        },
+        {
+          "src": "/images/product-11.jpg"
+        }
+      ],
       "flavors": [
         "שוקולד",
         "קינמון"
       ],
       "flavorCap": 1,
       "flavorLabel": "בחרו טעם",
+      "allowCakeText": false,
+      "cakeTextRequired": false,
       "nutrition": [
         {
           "unit": "פרוסה",
@@ -111,12 +122,6 @@
             "carbs": 13,
             "fat": 37.07
           }
-        }
-      ],
-      "images": [
-        {
-          "src": "images/product-11.jpg",
-          "label": ""
         }
       ]
     }
