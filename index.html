@@ -1222,14 +1222,14 @@
       variants.forEach(function(v){
         var unitLabel = v.unit || 'יחידה';
         if (v.label) html += '<div style="font-weight:800;margin-top:14px;color:var(--pink);">' + v.label + '</div>';
+        var has100 = !!v.per100g;
+        function row(name, key){ return '<tr><td>' + name + '</td><td>' + v.perUnit[key] + '</td>' + (has100 ? '<td>' + v.per100g[key] + '</td>' : '') + '</tr>'; }
         html +=
           '<table class="nutri-table">' +
-            '<tr><th></th><th>ל' + unitLabel + '</th><th>ל-100 גרם</th></tr>' +
-            '<tr><td>קלוריות (אנרגיה)</td><td>' + v.perUnit.cal + '</td><td>' + v.per100g.cal + '</td></tr>' +
-            '<tr><td>חלבונים (גרם)</td><td>' + v.perUnit.protein + '</td><td>' + v.per100g.protein + '</td></tr>' +
-            '<tr><td>פחמימות (גרם)</td><td>' + v.perUnit.carbs + '</td><td>' + v.per100g.carbs + '</td></tr>' +
-            '<tr><td>שומנים (גרם)</td><td>' + v.perUnit.fat + '</td><td>' + v.per100g.fat + '</td></tr>' +
+            '<tr><th></th><th>ל' + unitLabel + '</th>' + (has100 ? '<th>ל-100 גרם</th>' : '') + '</tr>' +
+            row('קלוריות (אנרגיה)', 'cal') + row('חלבונים (גרם)', 'protein') + row('פחמימות (גרם)', 'carbs') + row('שומנים (גרם)', 'fat') +
           '</table>';
+        if (v.note) html += '<p style="font-size:13px;color:var(--ink-soft);margin:8px 0 0;line-height:1.6;">' + v.note + '</p>';
       });
       bodyEl.innerHTML = html;
       overlay.classList.add('open');
@@ -1403,18 +1403,41 @@
             window.MatokCart.add(c.cartId, c.name, c.price, c.unitPrice, c.note);
           });
         } else {
-          var needFlavor = !!item.flavors && !card.querySelector('.flavor-pill input:checked');
-          ctlEl.innerHTML = needFlavor
-            ? '<button type="button" class="add-cart-btn need-flavor" aria-disabled="true">בחרו טעם להוספה</button>'
+          var missing = [];
+          if (item.flavors && !card.querySelector('.flavor-pills:not(.choice-group) .flavor-pill input:checked')) missing.push('flavor');
+          if (item.choiceGroups){
+            var anyOpen = false;
+            card.querySelectorAll('.choice-group').forEach(function(g){ if (!g.querySelector('input:checked')) anyOpen = true; });
+            if (anyOpen) missing.push('choice');
+          }
+          if (item.cakeTextRequired){
+            var txtEl = card.querySelector('.cake-text-input');
+            if (txtEl && !txtEl.value.trim()) missing.push('text');
+          }
+          var needMore = missing.length > 0;
+          var btnLabel = 'הוסיפו להזמנה';
+          if (missing.length > 1) btnLabel = 'השלימו את הבחירה להוספה';
+          else if (missing[0] === 'flavor') btnLabel = 'בחרו טעם להוספה';
+          else if (missing[0] === 'choice') btnLabel = 'בחרו אפשרות להוספה';
+          else if (missing[0] === 'text') btnLabel = 'מלאו את השדה להוספה';
+          ctlEl.innerHTML = needMore
+            ? '<button type="button" class="add-cart-btn need-flavor" aria-disabled="true">' + btnLabel + '</button>'
             : '<button type="button" class="add-cart-btn">הוסיפו להזמנה</button>';
           ctlEl.querySelector('.add-cart-btn').addEventListener('click', function(e){
             e.stopPropagation();
-            if (needFlavor){
-              var pills = card.querySelector('.flavor-pills');
-              if (pills){
-                pills.classList.remove('nudge'); void pills.offsetWidth; pills.classList.add('nudge');
-                try { pills.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (err) {}
+            if (needMore){
+              var first = null;
+              card.querySelectorAll('.flavor-pills').forEach(function(pills){
+                if (!pills.querySelector('input:checked')){
+                  pills.classList.remove('nudge'); void pills.offsetWidth; pills.classList.add('nudge');
+                  if (!first) first = pills;
+                }
+              });
+              if (missing.indexOf('text') > -1){
+                var te = card.querySelector('.cake-text-input');
+                if (te){ te.style.borderColor = 'var(--pink)'; if (!first){ first = te; te.focus(); } }
               }
+              if (first){ try { first.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (err) {} }
               return;
             }
             var c = computeCartContext();
