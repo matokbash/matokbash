@@ -7,6 +7,20 @@
       "price": "החל מ-70 ₪ (6 יח׳)",
       "desc": "שוקולד ציפס / אמסטרדם / שוקולד במילוי בוטנים — גם ב-8 וב-12 יח׳",
       "carbs": "5–7 גרם פחמימה ליחידה, בהתאם לטעם",
+      "images": [
+        {
+          "src": "/images/product-07.jpg",
+          "label": "שוקולד ציפס"
+        },
+        {
+          "src": "/images/product-08.jpg",
+          "label": "שוקולד במילוי בוטנים"
+        },
+        {
+          "src": "/images/product-21.jpg",
+          "label": "אמסטרדם"
+        }
+      ],
       "priceOptions": [
         {
           "label": "6 יח׳ – 80 ₪",
@@ -30,6 +44,8 @@
         "שוקולד במילוי בוטנים"
       ],
       "flavorLabel": "בחרו עד 2 טעמים (החל מ-12 יח׳)",
+      "allowCakeText": false,
+      "cakeTextRequired": false,
       "nutrition": [
         {
           "label": "שוקולד ציפס",
@@ -79,20 +95,6 @@
             "fat": 34.35
           }
         }
-      ],
-      "images": [
-        {
-          "src": "images/product-07.jpg",
-          "label": "שוקולד ציפס"
-        },
-        {
-          "src": "images/product-08.jpg",
-          "label": "שוקולד במילוי בוטנים"
-        },
-        {
-          "src": "images/product-21.jpg",
-          "label": "אמסטרדם"
-        }
       ]
     },
     {
@@ -100,6 +102,11 @@
       "price": "50 ₪ (4 יח׳) / 90 ₪ (9 יח׳)",
       "desc": "ריבועי בראוניז עשירים בשוקולד",
       "carbs": "7 גרם פחמימה לריבוע",
+      "images": [
+        {
+          "src": "/images/gallery-04.jpg"
+        }
+      ],
       "priceOptions": [
         {
           "label": "60 ₪ (4 יח׳)",
@@ -110,6 +117,8 @@
           "price": 120
         }
       ],
+      "allowCakeText": false,
+      "cakeTextRequired": false,
       "nutrition": [
         {
           "unit": "ריבוע",
@@ -126,12 +135,6 @@
             "fat": 28.42
           }
         }
-      ],
-      "images": [
-        {
-          "src": "images/gallery-04.jpg",
-          "label": ""
-        }
       ]
     },
     {
@@ -140,6 +143,11 @@
       "badge": "קיטו",
       "desc": "חתיכות פאדג׳ שוקולד עשירות",
       "carbs": "3 גרם פחמימה ליחידה",
+      "images": [
+        {
+          "src": "/images/product-12.jpg"
+        }
+      ],
       "priceOptions": [
         {
           "label": "4 יח׳ – 40 ₪",
@@ -150,6 +158,8 @@
           "price": 85
         }
       ],
+      "allowCakeText": false,
+      "cakeTextRequired": false,
       "nutrition": [
         {
           "unit": "יחידה",
@@ -166,12 +176,6 @@
             "fat": 51.77
           }
         }
-      ],
-      "images": [
-        {
-          "src": "images/product-12.jpg",
-          "label": ""
-        }
       ]
     },
     {
@@ -179,6 +183,11 @@
       "price": "10 ₪ / 45 ₪ / 90 ₪",
       "desc": "ציפוי שוקולד מריר או לבן, על מקל",
       "carbs": "5–6 גרם פחמימה ליחידה, בהתאם לציפוי",
+      "images": [
+        {
+          "src": "/images/product-05.jpg"
+        }
+      ],
       "priceOptions": [
         {
           "label": "1 יח׳ – 12 ₪",
@@ -200,6 +209,8 @@
         "ציפוי שוקולד מריר",
         "ציפוי שוקולד לבן"
       ],
+      "allowCakeText": false,
+      "cakeTextRequired": false,
       "nutrition": [
         {
           "label": "ציפוי שוקולד מריר",
@@ -233,12 +244,6 @@
             "fat": 38.46
           }
         }
-      ],
-      "images": [
-        {
-          "src": "images/product-05.jpg",
-          "label": ""
-        }
       ]
     },
     {
@@ -247,6 +252,16 @@
       "badge": "קיטו",
       "desc": "עוגיות חמאה קלאסיות ופריכות",
       "carbs": "2 גרם פחמימה ליחידה",
+      "images": [
+        {
+          "src": "/images/כמה עוגיות יש בתמונה ❓❓אני לא חושבת שמספיק 😅-1.webp",
+          "label": "עוגיות חמאה קלאסיות"
+        },
+        {
+          "src": "/images/product-04.jpg",
+          "label": "עוגיות דיונון"
+        }
+      ],
       "priceOptions": [
         {
           "label": "65 ₪ (10 יח׳)",
@@ -257,6 +272,8 @@
           "price": 120
         }
       ],
+      "allowCakeText": false,
+      "cakeTextRequired": false,
       "nutrition": [
         {
           "unit": "יחידה",
@@ -273,12 +290,6 @@
             "fat": 29.93
           }
         }
-      ],
-      "images": [
-        {
-          "src": "images/product-04.jpg",
-          "label": ""
-        }
       ]
     },
     {
@@ -286,6 +297,14 @@
       "price": "95 ₪ (10 יח׳)",
       "desc": "טעמי שוקולד, וניל או קפה",
       "carbs": "2 גרם פחמימה ליחידה",
+      "images": [
+        {
+          "src": "/images/מתקפת מקרונים 💥💥💥מארז מקרונים ב-50₪ עם 3 גרם פחמימה ליחידה.בטעמי שוקולד, וניל וקפה; אבל אפשר-1.webp"
+        },
+        {
+          "src": "/images/product-20.jpg"
+        }
+      ],
       "flavors": [
         "שוקולד",
         "וניל",
@@ -293,6 +312,8 @@
       ],
       "flavorCap": 2,
       "flavorLabel": "בחרו עד 2 טעמים",
+      "allowCakeText": false,
+      "cakeTextRequired": false,
       "nutrition": [
         {
           "unit": "יחידה",
@@ -309,12 +330,6 @@
             "fat": 17.06
           }
         }
-      ],
-      "images": [
-        {
-          "src": "images/product-20.jpg",
-          "label": ""
-        }
       ]
     },
     {
@@ -322,9 +337,19 @@
       "price": "50 ₪ (6 יח׳) / 100 ₪ (12 יח׳)",
       "desc": "בציפוי שוקולד מריר או לבן",
       "carbs": "4 גרם פחמימה ליחידה",
-      "flavors": [
-        "בציפוי שוקולד מריר",
-        "בציפוי שוקולד לבן"
+      "images": [
+        {
+          "src": "/images/product-03.jpg",
+          "label": "שוקולד"
+        },
+        {
+          "src": "/images/מיני דונאטס-3 גרם פחמימה ליחידה ❗שוקולד מריר - שוקולד לבן - וניל - חמאת בוטנים.webp",
+          "label": "שוקולד, וניל, חמאת בוטנים"
+        },
+        {
+          "src": "/images/589903738_18089318444502400_7171836401437941330_n.webp",
+          "label": "וניל ושוקולד"
+        }
       ],
       "priceOptions": [
         {
@@ -336,6 +361,12 @@
           "price": 115
         }
       ],
+      "flavors": [
+        "בציפוי שוקולד מריר",
+        "בציפוי שוקולד לבן"
+      ],
+      "allowCakeText": false,
+      "cakeTextRequired": false,
       "nutrition": [
         {
           "unit": "יחידה",
@@ -351,12 +382,6 @@
             "carbs": 13,
             "fat": 31.99
           }
-        }
-      ],
-      "images": [
-        {
-          "src": "images/product-03.jpg",
-          "label": ""
         }
       ]
     }
