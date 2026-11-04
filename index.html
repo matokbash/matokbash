@@ -165,6 +165,12 @@
   .add-cart-row{margin-top:auto;padding-top:12px;}
   .add-cart-btn{background:var(--teal-deep);color:#fff;border:none;border-radius:999px;padding:8px 16px;font-weight:700;font-size:calc(13px * var(--fs,1));cursor:pointer;}
   .add-cart-btn:hover{background:var(--pink);}
+  .add-cart-btn.need-flavor{background:var(--line);color:var(--ink-soft);cursor:pointer;}
+  .add-cart-btn.need-flavor:hover{background:var(--line);}
+  @keyframes flavorNudge{0%,100%{transform:translateX(0);}20%,60%{transform:translateX(-6px);}40%,80%{transform:translateX(6px);}}
+  .flavor-pills.nudge{animation:flavorNudge .45s ease;}
+  .flavor-pills.nudge .flavor-pill{border-color:var(--pink);}
+
   .qty-stepper{display:flex;align-items:center;justify-content:space-between;background:var(--teal-deep);border-radius:999px;padding:4px;width:100%;max-width:140px;}
   .qty-stepper button{width:28px;height:28px;flex:none;border-radius:50%;border:none;background:rgba(255,255,255,.25);color:#fff;font-weight:800;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
   .qty-stepper button:hover{background:rgba(255,255,255,.4);}
@@ -1397,9 +1403,20 @@
             window.MatokCart.add(c.cartId, c.name, c.price, c.unitPrice, c.note);
           });
         } else {
-          ctlEl.innerHTML = '<button type="button" class="add-cart-btn">הוסיפו להזמנה</button>';
+          var needFlavor = !!item.flavors && !card.querySelector('.flavor-pill input:checked');
+          ctlEl.innerHTML = needFlavor
+            ? '<button type="button" class="add-cart-btn need-flavor" aria-disabled="true">בחרו טעם להוספה</button>'
+            : '<button type="button" class="add-cart-btn">הוסיפו להזמנה</button>';
           ctlEl.querySelector('.add-cart-btn').addEventListener('click', function(e){
             e.stopPropagation();
+            if (needFlavor){
+              var pills = card.querySelector('.flavor-pills');
+              if (pills){
+                pills.classList.remove('nudge'); void pills.offsetWidth; pills.classList.add('nudge');
+                try { pills.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (err) {}
+              }
+              return;
+            }
             var c = computeCartContext();
             window.MatokCart.add(c.cartId, c.name, c.price, c.unitPrice, c.note);
           });
