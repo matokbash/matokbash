@@ -8,6 +8,11 @@
       "badge": "קיטו",
       "desc": "קרם וניל קלאסי עם שכבת קרמל פריכה",
       "carbs": "4 גרם פחמימה לתבנית",
+      "images": [
+        {
+          "src": "/images/gallery-16.jpg"
+        }
+      ],
       "priceOptions": [
         {
           "label": "25 ₪ (יחידה)",
@@ -18,6 +23,8 @@
           "price": 125
         }
       ],
+      "allowCakeText": false,
+      "cakeTextRequired": false,
       "nutrition": [
         {
           "unit": "תבנית",
@@ -34,12 +41,6 @@
             "fat": 16.26
           }
         }
-      ],
-      "images": [
-        {
-          "src": "images/gallery-16.jpg",
-          "label": ""
-        }
       ]
     },
     {
@@ -48,10 +49,10 @@
       "badge": "קיטו",
       "desc": "טעמים: פררו רושה, רפאלו ופטיסייר",
       "carbs": "2 גרם פחמימה לתבנית",
-      "flavors": [
-        "פררו רושה",
-        "רפאלו",
-        "פטיסייר"
+      "images": [
+        {
+          "src": "/images/product-13.jpg"
+        }
       ],
       "priceOptions": [
         {
@@ -65,6 +66,13 @@
           "qty": 6
         }
       ],
+      "flavors": [
+        "פררו רושה",
+        "רפאלו",
+        "פטיסייר"
+      ],
+      "allowCakeText": false,
+      "cakeTextRequired": false,
       "nutrition": [
         {
           "unit": "יחידה",
@@ -81,12 +89,6 @@
             "fat": 32.34
           }
         }
-      ],
-      "images": [
-        {
-          "src": "images/product-13.jpg",
-          "label": ""
-        }
       ]
     },
     {
@@ -94,6 +96,14 @@
       "price": "25 ₪ / 140 ₪ (6 יח׳)",
       "desc": "מתכון מסורתי בגרסה דלת פחמימה",
       "carbs": "1 גרם פחמימה ליחידה",
+      "images": [
+        {
+          "src": "/images/product-09.jpg"
+        },
+        {
+          "src": "/images/gallery-08.jpg"
+        }
+      ],
       "priceOptions": [
         {
           "label": "30 ₪ (יחידה)",
@@ -104,6 +114,8 @@
           "price": 160
         }
       ],
+      "allowCakeText": false,
+      "cakeTextRequired": false,
       "nutrition": [
         {
           "unit": "יחידה",
@@ -120,16 +132,6 @@
             "fat": 22.07
           }
         }
-      ],
-      "images": [
-        {
-          "src": "images/product-09.jpg",
-          "label": ""
-        },
-        {
-          "src": "images/gallery-08.jpg",
-          "label": ""
-        }
       ]
     },
     {
@@ -138,6 +140,11 @@
       "badge": "קיטו",
       "desc": "מרנג קליל בצורת שושנים",
       "carbs": "0 גרם פחמימה ליחידה",
+      "images": [
+        {
+          "src": "/images/gallery-05.jpg"
+        }
+      ],
       "priceOptions": [
         {
           "label": "35 ₪ (5 יח׳)",
@@ -148,6 +155,8 @@
           "price": 65
         }
       ],
+      "allowCakeText": false,
+      "cakeTextRequired": false,
       "nutrition": [
         {
           "unit": "יחידה",
@@ -164,12 +173,6 @@
             "fat": 0.08
           }
         }
-      ],
-      "images": [
-        {
-          "src": "images/gallery-05.jpg",
-          "label": ""
-        }
       ]
     },
     {
@@ -178,6 +181,14 @@
       "badge": "קיטו",
       "desc": "מרנג פריך על מקל, אידאלי למארזים",
       "carbs": "0 גרם פחמימה ליחידה",
+      "images": [
+        {
+          "src": "/images/אומנות המרנג 🍭🍭🍭שושני מרנגים- 0.5 גרם פחמימה ליחידה!5 יחידות ב-20₪ - 10 יחידות ב-35₪.jpg"
+        },
+        {
+          "src": "/images/product-14.jpg"
+        }
+      ],
       "priceOptions": [
         {
           "label": "45 ₪ (5 יח׳)",
@@ -188,6 +199,8 @@
           "price": 85
         }
       ],
+      "allowCakeText": false,
+      "cakeTextRequired": false,
       "nutrition": [
         {
           "unit": "יחידה",
@@ -203,12 +216,6 @@
             "carbs": 0,
             "fat": 0.08
           }
-        }
-      ],
-      "images": [
-        {
-          "src": "images/product-14.jpg",
-          "label": ""
         }
       ]
     }
