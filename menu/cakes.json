@@ -31,7 +31,8 @@
         "וניל"
       ],
       "flavorCap": 1,
-      "flavorLabel": "בחרו טעם"
+      "flavorLabel": "בחרו טעם",
+      "cakeTextRequired": true
     },
     {
       "name": "עוגת גן",
