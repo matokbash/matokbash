@@ -1184,8 +1184,8 @@
         var arrows = '';
         if (items.length > 1){
           arrows =
-            '<button type="button" class="photo-nav photo-nav-prev" aria-label="התמונה הקודמת">&#8249;</button>' +
-            '<button type="button" class="photo-nav photo-nav-next" aria-label="התמונה הבאה">&#8250;</button>';
+            '<button type="button" class="photo-nav photo-nav-prev" aria-label="התמונה הקודמת"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 6 9 12 15 18"/></svg></button>' +
+            '<button type="button" class="photo-nav photo-nav-next" aria-label="התמונה הבאה"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg></button>';
         }
         var counter = items.length > 1 ? '<div class="photo-counter">' + (current + 1) + ' / ' + items.length + '</div>' : '';
         content.innerHTML =
@@ -1326,8 +1326,8 @@
           '<div class="thumb-frame">' +
             '<img class="item-thumb" src="' + thumbSrc + '" alt="' + item.name + '">' +
             (Array.isArray(item.image) && item.image.length > 1 ?
-              '<button type="button" class="thumb-nav thumb-nav-prev" aria-label="התמונה הקודמת">&#8249;</button>' +
-              '<button type="button" class="thumb-nav thumb-nav-next" aria-label="התמונה הבאה">&#8250;</button>'
+              '<button type="button" class="thumb-nav thumb-nav-prev" aria-label="התמונה הקודמת"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 6 9 12 15 18"/></svg></button>' +
+              '<button type="button" class="thumb-nav thumb-nav-next" aria-label="התמונה הבאה"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg></button>'
             : '') +
           '</div>'
         ) : '') +
