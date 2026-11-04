@@ -7,6 +7,11 @@
       "price": "150 ₪ לספרה",
       "desc": "ספרה בגודל A4, שכבות פריך ושכבות קרם וניל/שוקולד, קישוט לבחירה",
       "carbs": "7 גרם פחמימה לפרוסה (מתוך 12 פרוסות)",
+      "images": [
+        {
+          "src": "/images/gallery-10.jpg"
+        }
+      ],
       "priceOptions": [
         {
           "label": "ספרה אחת – 180 ₪",
@@ -17,27 +22,30 @@
           "price": 360
         }
       ],
-      "allowCakeText": true,
-      "cakeTextLabel": "איזה מספר לרשום?",
-      "cakeTextPlaceholder": "לדוגמה: 18",
-      "images": [
-        {
-          "src": "images/gallery-10.jpg",
-          "label": ""
-        }
-      ],
       "flavors": [
         "שוקולד",
         "וניל"
       ],
       "flavorCap": 1,
       "flavorLabel": "בחרו טעם",
-      "cakeTextRequired": true
+      "allowCakeText": true,
+      "cakeTextRequired": true,
+      "cakeTextLabel": "איזה מספר לרשום?",
+      "cakeTextPlaceholder": "לדוגמה: 18"
     },
     {
       "name": "עוגת גן",
       "price": "A4: 150 ₪ | קוטר 22: 120 ₪",
       "desc": "עוגת שוקולד מצופה בגנאש שוקולד, סוכריות צבעוניות וזילופי קצפת",
+      "images": [
+        {
+          "src": "/images/product-01.jpg"
+        },
+        {
+          "src": "/images/product-29.jpg",
+          "label": "A4"
+        }
+      ],
       "priceOptions": [
         {
           "label": "קוטר 22 – 160 ₪",
@@ -49,22 +57,35 @@
         }
       ],
       "allowCakeText": true,
-      "cakeTextPlaceholder": "לדוגמה: יום הולדת שמח",
-      "images": [
-        {
-          "src": "images/product-01.jpg",
-          "label": ""
-        },
-        {
-          "src": "images/product-29.jpg",
-          "label": "A4"
-        }
-      ]
+      "cakeTextRequired": false,
+      "cakeTextPlaceholder": "לדוגמה: יום הולדת שמח"
     },
     {
       "name": "עוגה מעוצבת בהתאמה אישית",
       "price": "החל מ-300 ₪",
       "desc": "עוגה בעיצוב אישי לפי בקשה — לא רק דמויות, אלא כל נושא, אירוע או קונספט שתרצו (סרטים, מסיבות, צורות מיוחדות ועוד). המחיר תלוי בקוטר ובמורכבות העיצוב, ויכול להיות גבוה יותר מהמחירים הבסיסיים בהתאם לרמת הפירוט המבוקשת — לתמחור מדויק כדאי לשלוח השראה או תמונה בוואטסאפ.",
+      "images": [
+        {
+          "src": "/images/gallery-09.jpg",
+          "label": "פיקאצ׳ו"
+        },
+        {
+          "src": "/images/gallery-14.jpg",
+          "label": "וואן פיס"
+        },
+        {
+          "src": "/images/gallery-11.jpg",
+          "label": "Wicked"
+        },
+        {
+          "src": "/images/product-27.jpg",
+          "label": "חג המולד"
+        },
+        {
+          "src": "/images/product-28.jpg",
+          "label": "Brawl Stars"
+        }
+      ],
       "priceOptions": [
         {
           "label": "קוטר 18 – 340 ₪",
@@ -80,38 +101,26 @@
         }
       ],
       "allowCakeText": true,
+      "cakeTextRequired": false,
       "cakeTextLabel": "איזה עיצוב/דמות תרצו? (מומלץ לצרף גם רפרנס בוואטסאפ)",
-      "cakeTextPlaceholder": "לדוגמה: פיקאצ׳ו, וואן פיס...",
-      "images": [
-        {
-          "src": "images/gallery-09.jpg",
-          "label": "פיקאצ׳ו"
-        },
-        {
-          "src": "images/gallery-14.jpg",
-          "label": "וואן פיס"
-        },
-        {
-          "src": "images/gallery-11.jpg",
-          "label": "Wicked"
-        },
-        {
-          "src": "images/product-27.jpg",
-          "label": "חג המולד"
-        },
-        {
-          "src": "images/product-28.jpg",
-          "label": "Brawl Stars"
-        }
-      ]
+      "cakeTextPlaceholder": "לדוגמה: פיקאצ׳ו, וואן פיס..."
     },
     {
-      "name": "עוגת גבינה של הביוקר",
+      "name": "עוגת גבינה מעוצבת",
       "price": "קוטר 22: 185 ₪",
       "badge": "קיטו",
       "desc": "עוגת גבינה עם זילופי קצפת במסגרת, קישוט זהב, שוקולד ציפס, הקדשה אישית",
       "carbs": "2 גרם פחמימה לפרוסה (מתוך 8 פרוסות)",
+      "images": [
+        {
+          "src": "/images/product-25.jpg"
+        },
+        {
+          "src": "/images/product-30.jpg"
+        }
+      ],
       "allowCakeText": true,
+      "cakeTextRequired": false,
       "cakeTextPlaceholder": "לדוגמה: יום הולדת שמח",
       "nutrition": [
         {
@@ -128,16 +137,6 @@
             "carbs": 2,
             "fat": 22.15
           }
-        }
-      ],
-      "images": [
-        {
-          "src": "images/product-25.jpg",
-          "label": ""
-        },
-        {
-          "src": "images/product-30.jpg",
-          "label": ""
         }
       ]
     }
